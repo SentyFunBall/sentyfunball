@@ -1,4 +1,9 @@
-### Hi there 👋
+### i'm senty
+i do things:tm:, including but not limited to:
+- stupid discord bot
+- stupid Stormworks lua things
+- hm what else have i done
+- good question, lot of non-programming things though.
 
 <!--
 **SentyFunBall/sentyfunball** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
