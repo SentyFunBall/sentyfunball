@@ -1,0 +1,53 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: #0b0e14;
+        --background: #6490e7;
+        --primary: #5dd5d1;
+        --secondary: #c1cad7;
+        --accent: #085e25;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: aliceblue;
+        --background: rgb(35, 35, 45);
+        --primary: #2aa29e;
+        --secondary: rgb(65, 65, 65);
+        --accent: #a1f7be;
+    }
+}
+
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--background);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+h1, h2, p {
+    color: var(--text);
+}
+
+.page {
+    width: 50vw;
+    height: 35vw;
+    text-align: center;
+    margin-left: 25vw;
+    margin-top: 1vw;
+    background-color: var(--secondary);
+    border-radius: 25px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 1vh;
+    left: 3vw;
+    right: 0;
+}
