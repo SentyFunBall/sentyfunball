@@ -4,6 +4,7 @@
         --background: #6490e7;
         --primary: #5dd5d1;
         --secondary: #c1cad7;
+        --end: rgb(35,35,65);
         --accent: #085e25;
     }
 }
@@ -14,6 +15,7 @@
         --background: rgb(35, 35, 45);
         --primary: #2aa29e;
         --secondary: rgb(65, 65, 65);
+        --end: rgb(35,35,65);
         --accent: #a1f7be;
     }
 }
@@ -33,11 +35,12 @@ body {
 
 h1, h2, p {
     color: var(--text);
+    font-size: larger;
 }
 
 .page {
     width: 50vw;
-    height: 35vw;
+    height: auto;
     text-align: center;
     margin-left: 25vw;
     margin-top: 1vw;
@@ -45,9 +48,30 @@ h1, h2, p {
     border-radius: 25px;
 }
 
+.pageNoBG {
+    width: 50vw;
+    height: auto;
+    text-align: center;
+    margin-left: 25vw;
+    margin-top: 1vw;
+}
+
 .footer {
-    position: fixed;
-    bottom: 1vh;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--end);
+}
+.footer p {
+    position: relative;
     left: 3vw;
-    right: 0;
+}
+
+.header {
+    background-color: var(--end);
+}
+.header img {
+    width: 5%;
+    min-width: 5vh;
+    height: auto;
 }
