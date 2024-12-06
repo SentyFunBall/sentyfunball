@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --text: #0b0e14;
-        --background: #6490e7;
+        --background: #838383;
         --primary: #5dd5d1;
         --secondary: #c1cad7;
         --end: rgb(35,35,65);
@@ -13,10 +13,10 @@
     :root {
         --text: aliceblue;
         --background: rgb(35, 35, 45);
-        --primary: #2aa29e;
-        --secondary: rgb(65, 65, 65);
+        --primary: #1eadc0;
+        --secondary: rgb(105, 105, 105);
         --end: rgb(35,35,65);
-        --accent: #a1f7be;
+        --accent: #2db9ae;
     }
 }
 
@@ -33,13 +33,27 @@ body {
     margin: 0;
 }
 
-h1, h2, p {
+h1, h2 {
     color: var(--text);
     font-size: larger;
+}
+p {
+    color: var(--text);
+    font-size: large;
+}
+
+a {
+    color:var(--primary);
+    font-size: medium;
+}
+a:hover {
+    color: var(--accent);
+    font-size: medium;
 }
 
 .page {
     width: 50vw;
+    min-width: 50vw;
     height: auto;
     text-align: center;
     margin-left: 25vw;
@@ -64,6 +78,7 @@ h1, h2, p {
 }
 .footer p {
     position: relative;
+    color: var(--text);
     left: 3vw;
 }
 
