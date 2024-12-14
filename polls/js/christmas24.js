@@ -98,13 +98,16 @@ document.addEventListener("DOMContentLoaded", async() => {
     //submit
     submitBtn.addEventListener("click", async () => {
         if(selectedName && !alreadySubmit) {
-            alreadySubmit = true;
+            if (selectedName.length > 128) {
+                selectedName.substring(0, 128);
+            }
             userData = await getData(selectedName);
             if (userData == "Not found") {
                 showError("User not found.");
             } else if (userData == "Too many requests") {
                 showError("Too many requests");
             } else {
+                alreadySubmit = true;
                 updateResults(userData);
             }
         } else {
