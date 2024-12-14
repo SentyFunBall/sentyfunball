@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     const searchBox = document.getElementById("searchbox");
     const nameList = document.getElementById("namelist");
     const submitBtn = document.getElementById("submitbutton");
-    console.log(await (await fetch(server+"/api/ip")).json());
+    
     let names = await nameFetch();
     if(names == "Not found") {
         console.log("Couldn't fetch names");
