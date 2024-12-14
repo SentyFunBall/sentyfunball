@@ -212,7 +212,8 @@ document.addEventListener("DOMContentLoaded", async() => {
                         box2.innerHTML = randoms[box[1]][getRandomInt(4)];
                         break;
                     case "type14":
-                        box[0].innerHTML = questions[box[1]]
+                        let userGift = questions[box[1]].replace(/_/g, " ");
+                        box[0].innerHTML = userGift;
 
                         box2 = document.getElementById("result"+i+"type14");
                         box2.innerHTML = randoms[box[1]][getRandomInt(4)];
