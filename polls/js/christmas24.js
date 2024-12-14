@@ -1,5 +1,4 @@
 let server = "https://christmas24-443818.uk.r.appspot.com"
-//server = "http://127.0.0.1:8080"
 let selectedName = "";
 
 
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     const searchBox = document.getElementById("searchbox");
     const nameList = document.getElementById("namelist");
     const submitBtn = document.getElementById("submitbutton");
-    
+    console.log(await (await fetch(server+"/api/ip")).json());
     let names = await nameFetch();
     if(names == "Not found") {
         console.log("Couldn't fetch names");
