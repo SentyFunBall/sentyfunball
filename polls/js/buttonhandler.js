@@ -1,5 +1,5 @@
 function userRedirect(where) {
-    window.location.href = `/polls/${where}`;
+    window.location.href = `sentyfunball/polls/${where}`;
 }
 
 document.addEventListener("DOMContentLoaded", async() => {
