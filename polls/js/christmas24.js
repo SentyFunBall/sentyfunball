@@ -98,9 +98,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     //submit
     submitBtn.addEventListener("click", async () => {
         if(selectedName && !alreadySubmit) {
-            if (selectedName.length > 128) {
-                selectedName.substring(0, 128);
-            }
+            selectedName = selectedName.length > 128 ? selectedName.substring(0, 128) : selectedName;
             userData = await getData(selectedName);
             if (userData == "Not found") {
                 showError("User not found.");
