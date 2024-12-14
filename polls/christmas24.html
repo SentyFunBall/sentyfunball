@@ -9,7 +9,168 @@ pathIndex: ../../index
 ---
 
 <div class="pageNoBG">
-    <h1>I ran a poll for Christmas. Let's see the results.</h1>
-    <h1>Coming soon.</h1>
-    <p>For now, fill out the poll <a href="https://forms.gle/9zhiQza9rLgGoFSp6">here</a>.</p>
+    <div class="recap">
+        <div class="centered">
+            <h2>I ran a poll for Christmas. Let's see the results.</h2>
+            <h1><b>180</b> responses in one week. You're all Naughty.</h1>
+        </div>
+        <div class="centered">
+            <h2>Take a look at your results</h2>
+            <div class="buttonBox" style="position: relative; left: 20vw;">
+                <button onclick="userRedirect('c24pollresponse')"><h3>Let's go</h3></button>
+            </div>
+        </div>
+        <h2>Recap</h2>
+        <p>"I had an idea." -Senty, 2024. On the 3rd of December this year, I had the glorious idea of making a survey that would automatically determine if a Stormworks player was on the Naughty or Nice list for Christmas. I partnered with an elf from the Subworks Discord to help make the Google Form, and within an hour we had a basic form.</p>
+        <p>We posted it in the Subworks Discord as a trial run, and it went pretty well. We got probably a dozen responses, and I decided to post it in a handful of other servers in the coming hours, including Shitpost Lane, TBEOS, Endoskull's server, the Reddit, Reddit Discord, and the Stormworks Modding Forums. Within an hour or two, we had two dozen responses, which was about the most I expected to get.</p>
+        <p>On the quiz, I had set it up so there were mostly multiple-choice questions that could be graded automatically, but there were still some text-based questions that required manual grading. The elf and I made it so that the quiz score was the primary determiner for what list responders went onto, but also decided that owning the Space DLC or being in Shitpost Lane also warranted being on the Naughty list. The two dozen responses we had so far meant that I had to sit down and manually grade one hundred responses. Luckily people usually didn't write essays for me to grade. I could never be an English professor.</p>
+        <p>I compiled the results into a Google Sheets spreadsheet and gave the elf access to it so he could see the responses. As my little elf was working away grading people, I had made a quick formula to automatically place people on the correct list based on their form responses. The inital formula we used was <span class="code">=IF(And(<span style="color: orange;">B2</span>><span style="color: rgb(65, 114, 248);">11</span>, <span style="color: rgb(179, 55, 228);">E2</span><><span style="color: rgb(64, 206, 123);">"Yes"</span>, <span style="color: rgb(179, 55, 228);">J2</span><><span style="color: rgb(64, 206, 123);">"Yes"</span>), <span style="color: rgb(64, 206, 123);">"Nice"</span>, <span style="color: rgb(64, 206, 123);">"Naughty"</span>)</span>, where the B column was the quiz score, the E column was if the user was apart of SPL or not, and the J column was if the user owned Space DLC or not. If all three conditions were met (quiz score is greater than 11, not in SPL, doesn't own space), the user was marked as Nice by the system. If any condition wasn't met, then the user was marked naughty. So it's not like it was hard to get on the nice list, but it was very easy to get on the naughty list. We eventually dropped the "Not owning space dlc" requirement for getting onto the nice list, meaning that even those with space could be nice.</p>
+        <p>After 12 hours, we had 50 responses. My elf and I kept close watch on the spreadsheet. The elf would go through everyone's text responses and would give a final verdict if a user was naughty or nice. He would sometimes dock users points if they thought XML editing was cheating (it's not). Of course, I asked him to not share any data. We weren't storing any sensitive information, only Discord or Reddit usernames. I intend to compeletely delete the data afer this whole experience is over.</p>
+        <p>We saw that the success rate, the rate of users that made it onto the nice list, was only about 40%. Turns out a lot of people, about 60% of those who did the form, own the space dlc. Unfortunate. This did mean, however, that most people were instantly being marked as Naughty even if they had perfect answers for everything else. So the Elf did drop the space DLC requirement and the success rate literally flipped, going from 40% to 60%.</p>
+        <p>We decided to close the poll after a week. One week after it went up, we had 180 responses. Over 3000 total answers. 900 manually graded answers. If you missed it this year, we'll probably do it again next. Next time I am making this much more automated. Thanks to everyone who participated, you'll be able to take a look at your responses below.</p>
+        <p>- Senty</p>
+        <br>
+        <p>If you are C4V it downloads a 17123121 petabyte zip bomb to your computer.</p>
+        <p>- Elf</p>
+    </div>
+    <br><hr><br>
+    <h1>Result summary</h1>
+    <div class="results" id="results" style="display: block;">
+        <div class="result border">
+            <h2>Insights</h2>
+            <p>A total of 180 people took the quiz. Holy hell. I only expected maybe 25. As you'd expect, the total point distribution is a bell curve. Of course it is. With an average score of <b>12.6/16 (78%)</b>, most people passed the quiz. I set the passing threshold to be 11 points, ~69%. The median was 13 points, with 45 people getting that many points.</p>
+            <img src="/../assets/img/polls/christmas24/1.png">
+            <p>Particular shoutout to the two people who got 6 points and the one guy who got 18 points for a particularly good food answer involving good bacon. You know who you are. On the bright side, most people answered this form seriously. Some did not. I am not happy with those people.</p>
+            <br>
+            <img src="/../assets/img/polls/christmas24/2.png">
+            <p>My favorite part of looking at the overall results is seeing the just awful rates on some questions. I marked the correct answer for "Do you own Space DLC" as being "No", and since <b>~60%</b> of people own it, most got that wrong. You're all wrong. </p>
+        </div>
+        <h2>Questions</h2>
+        <div class="result border">
+            <h3>Do you think you're good or bad?</h3>
+            <p>I don't think my intended meaning got through with the wording of this question. I'll just say it was supposed to be open to interpretation. I wonder what percentage of people read it as "Are you good at the game?" or "Are you good morally?" Because chances are if you play Stormworks, the answer is no to both.</p>
+            <p><b>95 people (53%) answered this correctly</b>, saying they are not good at the game. The answer choice "Come on Santy you know we're all bad here" is particularly appreciated.</p>
+        </div>
+        <div class="result border">
+            <h3>Are you a part of SPL?</h3>
+            <p>I only made a small mistake on this one. I thought more people would know what SPL is. The moment I posted the poll to Reddit, the number of "What's SPL" answers doubled, and then tripled.</p>
+            <img src="/../assets/img/polls/christmas24/3.png">
+            <p><b>11% of players</b> are in SPL? That can't be right. Maybe posting the form in SPL (ShitPost Lane, in case you're wondering. It's a Discord server) wasn't my brightest idea. Don't worry, an estimated 0.023% of all Stormworks players answered the poll. I don't have any remarks. Most people don't know what an obscure Discord server with only a couple hundred members (if that) is. Whoda thunk?</p>
+        </div>
+        <div class="result border">
+            <h3>Have you ever XML edited?</h3>
+            <p>To no one's surprise, most people XML edit. Although a smaller proportion than I thought. Reddit is going to play a key part of much of this. As I had the poll posted around Discord, most people had XML edited. I think the bias here is that, chances are if you're in one of the many Stormworks Discord servers that aren't the official one, you've probably XML edited before just because you've probably had more experience in the game than otherwise. That makes sense, right? But as I posted it to Reddit, more and more people said they hadn't XML edited.</p>
+            <p>Not to fret though, as <b>69% (nice) of respondents have XML edited.</b> If we don't count Reddit users, that number jumps up to nearly 85%.</p>
+        </div>
+        <div class="result border">
+            <h3>Do you think XML editing is cheating?</h3>
+            <p>Spoiler alert, most people said no. Shoutout to the handful of people who said yes though. They were marked naughty. Some of the best responses include:</p>
+            <ul>
+                <li><p>- Yes. I am a goober.</p></li>
+                <li><p>- Nah, it's just popcorn shrimpin'.</p></li>
+                <li><p>- eggsmell</p></li>
+                <li><p>- Yes, learn to play the game loser</p></li>
+                <li><p>- I don't know shit</p></li>
+                <li><p>- Yes and I will not elaborate.</p></li>
+            </ul>
+        </div>
+        <div class="result border">
+            <h3>Favorite Major Update?</h3>
+            <p>I only listed some of the major updates that Stormworks has had. I decided to only list 1.0 and after because 1) I didn't want too many options and 2) Most people have joined the game after 1.0. Most people liked the Weapons DLC, for good reason. It's also the highest rated DLC, and at one point I think it was higher rated than the base game itself on Steam.</p>
+            <p>The top five updates are: Weapons, Modular Engines, Modding, 1.0, and Industry. Weapons has the plurality with <b>35% of players saying it's their favorite.</b></p>
+            <img src="/../assets/img/polls/christmas24/4.png">
+        </div>
+        <div class="result border">
+            <h3>What do you hope the NEXT Major Update is?</h3>
+            <p>I wanted to know what people thought the next major update was. Far too many people answered for optimizations or multiplayer fixes. Without getting too far into a tangent, the game is already about as optimized as it's going to get. Stop spawning massive vehicles in MP, and know what to expect from the game. And don't play on the public servers. Those suck. (I am now on many people's enemy list)</p>
+            <p>Many people wanted sails, one person remembered the motorcycle parts that were leaked some time back, one person asked for balls, many asked for bug fixes, but overall it was a pretty wide variety of suggestions. Too bad I can't forward this list to the devs. But I did dock points from anyone who asked for physics or MP improvements. It's fine. No, I'm not coping.</p>
+        </div>
+        <div class="result border">
+            <h3>Do you own Stormworks: Space?</h3>
+            <p>Ah, space. The final frontier. And by most, the worst update! Turns out a lot of people own space. <b>61%, in fact.</b> I do hear the new components are good. At I would like to update my self-landing space rocket to use a liquid fuel engine instead of a jet engine at some point. Too bad I can't mod them in.</p>
+        </div>
+        <div class="result border">
+            <h3>Have you ever committed a warcrime? (In Stormworks)</h3>
+            <p>I mean, who hasn't purposely sunk the Hospital Ship at some point, am I right? Warcrimes an an <i>essential</i> component to the fun and replayability of Stormworks. Again, there's a reason that the Weapons DLC is so popular. Luckily, most people agree with me here in that warcrimes are Cool&trade;. My good pal C4V has several "Warcrimes on a stick" that can be used to destroy pretty much any vehicle in any fashion. And of course myself, I can summon thermonuclear weapons where ever I please. Thank you, Deltars, for giving us players this magical ability.</p>
+            <p><b>78% of you</b> have committed a warcrime at some point or another. Next year I'll have to rank who's committed the worst warcrimes. I'm disappointed in the other 22% of you though.</p>
+        </div>
+        <div class="result border">
+            <h3>Favorite vehicle type?</h3>
+            <p>The vehicle types in Stormworks can be boiled down to a handful of options: air, sea, land, space. Most people said either ship or plane (submarine and helicopter are also included in those categories). Some of my favorite responses are "Downtown Louisville", "Project 710 class attack submarine, <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3362290183">now available on the steam workshop!</a>" (Link to steamcommunity.com), "1995 suzuki swift", "echolodia", "Your mom", "fishj", "air", "local motive", and "intercontinental ballistic missile." You all know who you are.</p>
+        </div>
+        <div class="result border">
+            <h3>Favorite foods</h3>
+            <p>This was actually a lot of fun. I usually ask this question on forms because it's a harmless question that can have tons of answers. I didn't have any expectations for it, but given the shear number of responses, I have learned about a lot of new food with this. Even the elf agrees. Color me surprised, Stormworkers have a good taste in food. Pizza was the most popular, with <b>17 votes (10%) going to pizza</b>. Burgers, soups, various pastas, and Mac n' Cheese also made the top votes. Other fun ones include:</p>
+            <ul>
+                <li><p>оладьи</p></li>
+                <li><p>Popcorn shrimp</p></li>
+                <li><p>Chile Rellenos</p></li>
+                <li><p>Also your mom</p></li>
+                <li><p>Salted pork & Lentils</p></li>
+                <li><p>Currywurst</p></li>
+                <li><p>Shawarma</p></li>
+                <li><p>Megalodon fin soup</p></li>
+                <li><p>Red deer inner fillet with red wine sauce and creamed potatoes</p></li>
+                <li><p>Francesinha</p></li>
+                <li><p>Frikandel</p></li>
+                <li><p>Raclette </p></li>
+                <li><p>Lego</p></li>
+            </ul>
+        </div>
+        <div class="result border">
+            <h3>Is SWO Voice chat a good place?</h3>
+            <p>No. It isn't but <b>25% of you thought it is.</b> Nuh uh. Last time I was in that voice chat, it was riddled with 13 year old "rizzlers" trying to- Wait, a lot of people thought I was talking about the voice chat in Stormworks? Huh. Either way, <b>75% of people said no</b>, it isn't good.</p>
+            <p>This was a pretty empty question, but like most of these, I was just trying to let people get points. Or marks. Whatever you call them. Most of these questions have no substance, they're just for the point.</p>
+        </div>
+        <div class="result border">
+            <h3>Have you ever used ChatGPT to help with SWLua?</h3>
+            <p>Surprisingly, far less people said yes than I thought. The rate is <b>26% yes, 74% no.</b> And I'm wondering what percent of that No is just because they've never touched Stormworks Lua. Some folk are scared of Lua and programming, but we'll get into that in a minute.</p>
+            <p>What I do want to know, however, is what kind of schizophrenic results ChatGPT is giving. I've tested it, it's gotten better and can usually do <i>very</i> simple tasks like drawing a single square to the screen. But it often makes up functions entirely. I see people in the Discord like "why doesn't this code work" and it has made up code like <span class="code">targets = radar.getData()</span>, or Deltars forbid a <span class="code">while true do</span> loop. Obviously people who've never seen a line of code in their lives don't know that doesn't work, but it's a giveaway. Rant over.</p>
+        </div>
+        <div class="result border">
+            <h3>How many hours do you have?</h3>
+            <p>I'll just post the image.</p>
+            <img src="/../assets/img/polls/christmas24/5.png">
+            <p>The elf and I thought it would be funny to set the correct results to be from 2000 to 8000 hours. Originally I had it 1000 hours and up was correct. Anyway, most people have less hours than that it seems. <b>35% of people have less than 1000 hours. 22% have 1000-2000 hours. 37% have 2000-8000 hours (the correct answer). 5% have more than 8k.</b> Those are insane people, with over 8k. I <i>only</i> have 5600. Crazy people, over 6000 hours.</p>
+        </div>
+        <div class="result border">
+            <h3>Have you ever been muted in SWO?</h3>
+            <p>Reddit strikes again! Turns out, if you've never been on the Stormworks Discord, you've probably never been muted in there! Although, the results are quite even, <b>42% yes to 58% no.</b> Alright. That 42% (including myself and the elf) should probably read the rules.</p>
+        </div>
+        <div class="result border">
+            <h3>Logic or Lua?</h3>
+            <p>This is the only one where I'm distraught about the results. I love Lua! What do you mean people find it scary? What do you mean only <b>30% of people prefer Lua?</b> How? I'm just kidding - mostly - I understand logic is easier to set up usually. Even excluding displays, Lua is so much easier to do complex math on, such as matrix math. Why isn't the matrix library in vehicle Lua? Same with vectors. Those should be added with a higher char limit.</p>
+            <img src="/../assets/img/polls/christmas24/6.png">
+            <p>I can't believe it.</p>
+        </div>
+        <div class="result border">
+            <h3>Are you C4V Engineering?</h3>
+            <img src="/../assets/img/polls/christmas24/7.png">
+            <p>Why. Would would anyone impersonate C4V of all people? This question was the elf's idea, to instantly mark anyone who said they were C4V as naughty. C4V was marked naughty, but ironically not for this reason. The handful of people who said they were C4V, I like your style.</p>
+        </div>
+        <div class="result border">
+            <h3>Oh, and the presents?</h3>
+            <p>Damn straight we're giving presents away. Nine possible presents: a car bomb, coal, nutcracker, christmas tree, snowball cannon, candy cane, sleigh with reindeer, a "present", and a free Project 710 Class Fast Attack Submarine, neatly wrapped with a bow!</p>
+            <p>If you want to see what you got, view your results with the button just below.</p>
+            <img src="/../assets/img/polls/christmas24/8.png">
+        </div>
+        <div class="result">
+            <h2>And now for some Honorable Mentions</h2>
+            <p>Shoutout to <s>Mongoose</s> Bubbles from Subworks and Nugget from SWO for getting the record low of 6/16 on the quiz. Both of these responses were purposefully done to score as few points as possible. They're probably not happy with such a high score.</p>
+            <p>On the opposite end of the spectrum, a potato was the only respontent to get more than 100%, getting 18/16. I'm impressed. Two people got 17 points, the technical highest possible score (I accidentally made a question worth 0 points). Three people got 16/16 points.</p>
+            <p>To everyone who put emojis somewhere in their response: I don't like you.</p>
+            <p>Shoutout to the guy from a Minecraft server I'm in for completing the quiz and having zero clue what Stormworks is. He got few points.</p>
+            <p>With 180 responses, we saw a total of 3060 answers, and I graded 900 questions. Yay!</p>
+            <p>If you missed it this year, we'll probably do it again next.</p>
+            <p>Thank you to everyone for doing this stupid project. See you next time.</p>
+        </div>
+    </div>
+    <div class="centered">
+        <h2>Take a look at your results</h2>
+        <div class="buttonBox" style="position: relative; left: 20vw;">
+            <button onclick="userRedirect('c24pollresponse')"><h3>Let's go</h3></button>
+        </div>
+    </div>
+    <br>
+    <script src="/polls/js/buttonhandler.js"></script>
 </div>

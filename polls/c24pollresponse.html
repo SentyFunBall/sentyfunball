@@ -1,0 +1,136 @@
+---
+layout: default
+title: Your Naughty or Nice Results
+style: ../../styles/style.css
+desc: Your personal results. Are you Naughty? Or Nice?
+fullTitle: Stormworks Naughty or Nice
+pathFavicon: ../../assets/SFB-4.png
+pathIndex: ../../index
+---
+
+<div class="pageNoBG">
+    <div class="buttonBox">
+        <button onclick="userRedirect('christmas24')"><h3>Back to results</h3></button>
+    </div>
+    <div class="recap">
+        <div class="centered">
+            <h1>Let's take a look at your results.</h1>
+        </div>
+    </div>
+    <div class="selector">
+        <h3>Enter the username you submitted on the quiz.</h3>
+        <input type="text" class="searchbox" id="searchbox" placeholder="Search names..." autocomplete="off">
+        <div class="dropdown" id="namelist"></div>
+        <button class="submitbutton" id="submitbutton"><h3>Submit</h3></button>
+    </div>
+    <div class="errbox" id="errbox">
+        <p id="errmsg">User not found</p>
+    </div>
+    <div class="results" id="results">
+        <div class="result">
+            <h1>Break it to me gently.</h1>
+            <h2 class="notbold">You were marked <span id="result0" class="type0">20</span></h2>
+            <p>Why? Easy, you're <span id="result15" class="type15"></span></p>
+            <p id="result0type0"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>How inflated is your ego?</h1>
+            <h2 class="notbold">You said you were <span id="result1" class="type1">4</span></h2>
+            <p id="result1type1"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>What is SPL, anyway?</h1>
+            <h2>Ah, Shitpost Lane. Are you in it? Wait, you said you're <span id="result2" class="type2">5</span>? Oh. Damn.</h2>
+            <p id="result2type2">Probably a good thing, not gonna lie. Don't worry, only <b>10% are SPL members.</b></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>XML Editing. That's a topic. Usually popular.</h1>
+            <h2>You said you do <span id="result3" class="type3">6</span></h2>
+            <p id="result3type3"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Don't we all <i>love</i> Stormworks updates?</h1>
+            <h2>Your favorite update was the <span id="result4" class="type4">8</span> Update. Good choice.</h2>
+            <p id="result4type4">Most people's favorite update was Weapons, with a <b>34% plurality!</b></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Space. The final frontier. And by most, the worst update.</h1>
+            <h2>An amazing <b>60% of players</b> own the Space DLC for no good reason! And you're <span id="result5" class="type5">10</span> part of them!</h2>
+            <p id="result5type5"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>The Geneva Conventions don't exist in Stormworks, right?</h1>
+            <h2>No? Good. Because you have<span id="result6" class="type6">11</span> committed warcrimes. Don't want to get in trouble now, do we?</h2>
+            <p id="result6type6"><b>60% of players</b> commit warcrimes. Now that's what I call Stormworks. No wonder Weapons DLC is so popular.</p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Stormworks is a game about vehicles. What are some vehicles?</h1>
+            <h2>You listed "<span id="result7" class="type7">12</span>" as your favorite. Peculiar indeed.</h2>
+            <p id="result7type7"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Food. Need I say more?</h1>
+            <h2>Stormworks player's come from all over the world. Your favorite food was "<span id="result8" class="type8">13</span>" when you answered this quiz. I hope it hasn't changed.</h2>
+            <p id="result8type8"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Is a public Discord Voice Chat a good place? No.</h1>
+            <h2>While I wonder what the average age of Voice Chat users are, you said that voice chats are <span id="result9" class="type9">14</span> a good place to be.</h2>
+            <p id="result9type9"><b>75% of you think it's good. It's not.</b> When I posted the quiz on Reddit, I got several people asking me what SWO was. StormWorks Official. It's the main SW Discord. Stop asking me.</p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Generate a snarky remark about using ChatGPT for something ChatGPT doesn't know.</h1>
+            <h2><i><span id="result10" class="type10">15</span></i> 75% of you used ChatGPT for SWLua? Really!?!? Come on y'all!</h2>
+            <p id="result10type10"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Rigged.</h1>
+            <h2><span id="result11" class="type11">17</span></h2>
+            <p id="result11type11">Impressively, <b>60% of you haven't been muted.</b> And seriously, stop asking me what SWO is, or you <i>will</i> be put onto the "Previously muted" list.</p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Logic or Lua?</h1>
+            <h2>The age-old question. You prefer <span id="result12" class="type12">18</span>, I prefer Lua. 69% prefer Logic. They're wrong.</h2>
+            <p id="result12type12"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Impersonation is cool.</h1>
+            <h2>As a joke, I asked if you were C4V Engineering, a well-known Stormworkers despite what he may say. You said you're <span id="result13" class="type13">19</span> C4V. 6% did. Why?</h2>
+            <p id="result13type13"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <h1>Guess what? You get a prize.</h1>
+            <h2>Everyone deserves a little present, right? This year, you've been gifted a <span id="result14" class="type14">21</span>. I hope you're happy.</h2>
+            <p id="result14type14"></p>
+            <hr><br>
+        </div>
+        <div class="result">
+            <div class="buttonBox" style="float: left; margin-right: 5vw; margin-bottom: 5vw;">
+                <button onclick="downloadPdf()"><h3>Download Responses</h3></button>
+            </div>
+            <div class="buttonBox" style="float: left; margin-right: 5vw; margin-bottom: 5vw;">
+                <button onclick="downloadCert()"><h3>Download Certficate</h3></button>
+            </div>
+            <div class="buttonBox" style="float: left;">
+                <button onclick="downloadGift()"><h3>Download Present</h3></button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <script src="/polls/js/buttonhandler.js"></script>
+    <script src="/polls/js/christmas24.js"></script>
+</div>

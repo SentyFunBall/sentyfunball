@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: light) {
     :root {
-        --text: #0b0e14;
-        --background: #838383;
+        --text: #e7e7e7;
+        --background: #545a64;
         --primary: #5dd5d1;
         --secondary: #c1cad7;
         --end: rgb(35,35,65);
@@ -20,7 +20,6 @@
     }
 }
 
-
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
@@ -29,19 +28,32 @@
 body {
     background-color: var(--background);
     width: 100vw;
-    height: 100vh;
+    height: auto;
     margin: 0;
 }
 
-h1, h2 {
+h1 {
     color: var(--text);
-    font-size: larger;
+    font-size: xx-large;
+}
+h2 {
+    color: var(--text);
+    font-size: x-large;
+}
+h3 {
+    color: var(--text);
+    font-size: auto;
 }
 p {
     color: var(--text);
-    font-size: large;
+    font-size: medium;
+    user-select: text;
 }
-
+.code {
+    background-color: rgba(50, 50, 50, 100);
+    color:#f3f3f3;
+    font-family: 'Courier New', Courier, monospace;
+}
 a {
     color:var(--primary);
     font-size: medium;
@@ -51,28 +63,44 @@ a:hover {
     font-size: medium;
 }
 
+.notbold h2 {
+    text-decoration: none;
+}
+
 .page {
     width: 50vw;
-    min-width: 50vw;
+    min-width: 300px;
+    margin: auto;
+    padding: 10px;
     height: auto;
     text-align: center;
-    margin-left: 25vw;
-    margin-top: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
     background-color: var(--secondary);
     border-radius: 25px;
+    user-select: none;
 }
 
 .pageNoBG {
     width: 50vw;
+    min-width: 300px;
+    margin: auto;
+    padding: 10px;
     height: auto;
+    text-align: left;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    user-select: none;
+}
+
+.centered {
     text-align: center;
-    margin-left: 25vw;
-    margin-top: 1vw;
+    align-items: center;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 0%;
     width: 100vw;
     background-color: var(--end);
 }
@@ -89,4 +117,157 @@ a:hover {
     width: 5%;
     min-width: 5vh;
     height: auto;
+}
+
+.buttonBox {
+    width: 10vw;
+    min-width: 100px;
+    max-width: 200px;
+    height: max-content;
+}
+button {
+    background-color: var(--end);
+    width: 10vw;
+    min-width: 100px;
+    max-width: 200px;
+    height: 8vh;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: darkslateblue;
+    border: 2px solid cornflowerblue;
+}
+button:active {
+    background-color: royalblue;
+}
+button h3 {
+    margin: auto;
+    font-size: medium;
+}
+button:active h3 {
+    color: skyblue;
+}
+
+.dropdown {
+    display: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: var(--end);
+    position: absolute;
+    width: 30vw;
+    min-width: 300px;
+    z-index: 1000;
+    color: var(--text);
+}
+.dropdown div {
+    padding: 5px;
+    cursor: pointer;
+}
+.dropdown div text {
+    font-size: auto;
+}
+.dropdown div:hover {
+    background-color: var(--secondary);
+}
+.hidden {
+    display: none;
+}
+
+.searchbox {
+    background-color: var(--end);
+    color: var(--text);
+    width: 30vw;
+    min-width: 350px;
+    min-width: 100px;
+    height: 3vh;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: text;
+    margin-right: 3em;
+    margin-bottom: 5vh;
+}
+
+.result {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.result.border {
+    background-color: rgba(200, 200, 200, 0.1);
+    border-radius: 15px;
+    margin-bottom: 1vh;
+    min-width: 300px
+}
+.result.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.result img {
+    width: 40vw;
+    height: auto;
+    max-width: 100%;
+    min-width: 250px;
+}
+.result.border img {
+    width: 40vw;
+    height: auto;
+    max-width: 100%;
+    min-width: 250px;
+    margin-left: 5vw;
+    margin-top: 1vh;
+}
+.result.border p {
+    width: 40vw;
+    margin-left: 5vw;
+    min-width: 250px;
+}
+.result.border hr {
+    width: 40vw;
+    margin-left: 5vw;
+    min-width: 250px;
+}
+.result.border h3 {
+    width: 40vw;
+    margin-left: 5vw;
+    min-width: 250px;
+}
+.result.border h2 {
+    width: 40vw;
+    margin-left: 5vw;
+    min-width: 250px;
+}
+  
+.results {
+    display: none;
+    overflow-y: hidden;
+}
+
+.errbox {
+    position: fixed;
+    bottom: 90%;
+    width: 20vw;
+    min-width: 300px;
+    left:40vw;
+    height: auto;
+    margin: auto;
+    background-color: crimson;
+    border-radius: 10px;
+    color: aliceblue;
+    display: none;
+    z-index: 9999;
+}
+.errbox p {
+    margin-left: 10px;
+}
+
+ul {
+    overflow: hidden;
+}
+li {
+    margin: -2vh;
 }
