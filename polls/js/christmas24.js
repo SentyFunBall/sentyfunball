@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     const searchBox = document.getElementById("searchbox");
     const nameList = document.getElementById("namelist");
     const submitBtn = document.getElementById("submitbutton");
-    
+
     let names = await nameFetch();
     if(names == "Not found") {
         console.log("Couldn't fetch names");
@@ -220,8 +220,9 @@ document.addEventListener("DOMContentLoaded", async() => {
                     case "type15":
                         let reason = "bad at the game. Sorry to tell you like this. We both knew it was coming.";
                         if (parseInt(userData["score"].substring(0, 2)) <= 11) {
-                            reason = "score on the quiz wasn't high enough. Trust me, it wasn't rigged.";
-                        } else if (questions[5] == "Yes") {
+                            reason = "not good at test taking. Your score on the quiz wasn't high enough. Trust me, it wasn't rigged.";
+                        }
+                        if (questions[5] == "Yes") {
                             reason = "in SPL. Bad move.";
                         }
                         box[0].innerHTML = reason;
