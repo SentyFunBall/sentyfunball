@@ -98,6 +98,11 @@ a:hover {
     align-items: center;
 }
 
+.lalign {
+    text-align: left;
+    align-items: flex-start;
+}
+
 .footer {
     position: fixed;
     bottom: 0%;
@@ -117,6 +122,24 @@ a:hover {
     width: 5%;
     min-width: 5vh;
     height: auto;
+}
+
+.blist {
+    list-style-type: disc;
+}
+
+ul {
+    user-select: text;
+    overflow: visible;
+    padding-left: 20px;
+}
+li {
+    list-style-position: inside;
+    color: var(--text);
+}
+li p {
+    margin-top: -20px;
+    margin-left: 20px;
 }
 
 .buttonBox {
@@ -263,11 +286,4 @@ button:active h3 {
 }
 .errbox p {
     margin-left: 10px;
-}
-
-ul {
-    overflow: hidden;
-}
-li {
-    margin: -2vh;
 }
