@@ -265,7 +265,7 @@ button:active h3 {
 .result {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.0s ease, transform 0.0s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .result.border {
     background-color: rgba(200, 200, 200, 0.1);
