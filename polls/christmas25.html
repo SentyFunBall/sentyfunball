@@ -2,18 +2,218 @@
 layout: default
 title: SW 2 Naughty 2 Nice 25
 style: ../../styles/style.css
-desc: Results coming soon
-fullTitle: Stormworks Naughty or Nice 2025 Coming soon
+desc: Let's see the results for the 2025 Stormworks Naughty or Nice poll!
+fullTitle: Stormworks 2 Naughty 2 Nice '25
 pathFavicon: ../../assets/SFB-4.png
 pathIndex: ../../index
 ---
 
 <link rel="stylesheet" href="../../styles/style.css">
-<div class="page">
-    <h1>SW 2 Naughty 2 Nice '25</h1>
-    <h2>Results coming soon</h2>
-    <p id="countdown"></p>
-    <p>December 20, 2025, 12:00 PM PT </p>
-    <a href="https://forms.gle/C14ECYejUUvivE3aA">Take the quiz now</a>
-    <script src="./../../polls/js/countdown.js"></script>
+<div class="pageNoBG">
+<div class="recap">
+    <div class="centered">
+        <h2>I ran another poll for another Christmas.</h2>
+        <h1>120 responses in a week. Boy, you people are sad.</h1>
+    </div>
+    <div class="centered">
+        <h2>Take a look at your results</h2>
+        <div class="buttonBox" style="position:relative; left:20vw;">
+            <button onclick="userRedirect('./c25personalized.html')"><h3>Let's go</h3></button>
+        </div>
+    </div>
+    <h2>Recap</h2>
+    <p>Last year, I had the <strike>terrible</strike> <i>wonderful</i> idea to run a poll that would automatically figure out if a Stormworker was naughty or nice. Some of you may remember it. Last year, me and the elf managed to scrounge up 180 responses to the poll, which we were not prepared for at all.</p>
+    <p>It had us grading overtime, with over 900 manually graded text response questions. In addition, I set up an entire website where responders could compare themselves to the rest of Stormworks and download a fun certificate. People loved it.</p>
+    <hr>
+    <p>So we did it again. We slightly tweaked the questions to be less biased, added some heavily biased questions & answers in there, and let the poll run hog wild. Me and the same elf from last year worked on grading responses through the magic of Google Forms and had all the data through the magic of Google Sheets.</p>
+    <p>Unlike last year, there were no questions that marked one as instantly naughty. If anything, having a joke response or a stupid name like "Big Dick Ben" made you instantly naughty, regardless of quiz score. Gradually, responses came in, and me and the elf worked hard grading. While unfortunately we had fewer responses than last year, this year still had some incredibly funny ones. Fortunately, it was much easier to grade and do everything this year, as we already had infrastructure in place from last year for grading, hosting, and websiting.</p>
+    <p>Once again, we closed it after a week, and after 120 responses, 840 manually graded answers, and 2040 total answers. If you missed it this year, sucks to suck. Thank you to everyone who participated, you make these polls fun.</p>
 </div>
+<br><hr><br>
+<h1>Results summary</h1>
+<div class="results" id="results" style="display:block;">
+    <div class="result border">
+        <h2>Insights</h2>
+        <p>120 people took the quiz this year, and most of them were real responses. Still, 120 responses is a lot. Interestingly, the point distribution is slightly off from being a normal distribution. Interesting. The maximum possible points was 17, and no one got that this year, mostly cause there were no good bacon answers. The passing threshold was 12 points, and with that <b>60.5%</b> are nice. If I make the passing number 11 instead, 79% are nice. This does mean that people got lower scores on average this year, perhaps due to the quiz, perhaps due to Stormworkers being less nice this year. <b>21 people got 12 points, 23 got 11</b>.</p>
+        <img src="./../../assets/img/polls/christmas25/1.png">
+        <p>Shoutout of course to the one person who got 0 points for a terrible joke response, and the one person who got 2 points, you probably deserved it.</p>
+        <img src="./../../assets/img/polls/christmas25/2.png">
+        <p>Seeing how many people missed the questions on national loyalty and Lua was hilarious though. The loyalty one was rigged, the logic/Lua one was not. You all just don't wanna use Lua. You're wrong.</p>
+    </div>
+</div>
+<br>
+<h2>Questions</h2>
+<div class="result border">
+    <h3>Do you think you're good or bad?</h3>
+    <p>I like this question because it's purposefully worded vaguely. People can either decide if they were good at the game, or if they were good morally. Still, if you play Stormworks, the answer is no to both.</p>
+    <p><b>92 people (78%) answered this correctly</b>, and 6 people claimed they are Deltars (I only added this option because Deltars allegedly answered the poll last year).</p>
+</div>
+<div class="result border">
+    <h3>Have you ever stolen a vehicle?</h3>
+    <p>This is straight forward and simple. Have you stolen a vehicle? If you have, that's very naughty. Some questioned the yambag callout, and that's because yambag steals vehicles people poured months of their lives into, claims them for himself, and refuses to say anything but "lol its a video game retard."</p>
+    <p><b>95 people (80%)</b> have never stolen a vehicle. And those people are good. Shame on the other 20% of you.</p>
+</div>
+<div class="result border">
+    <h3>What's your favorite propulsion method?</h3>
+    <p>Stormworks has many different ways to make vehicles move, that's part of the games beauty. If you really wanted, you could build a nuclear powered car, or a jet boat, and who's going to stop you? Besides me, nobody! We left this question open, and <b>90 total people (76%)</b> choose a correct answer. One person was doubly correct by answering "Pallet flying" and two people were doubly incorrect by answering "Diesel-electric", you know that doesn't work in Stormworks.</p>
+</div>
+<div class="result border">
+    <h3>What Stormworks sub-community(s) are you apart of?</h3>
+    <p>Stormworks has many offshoot communities for people to gather. I used to be part of many of them, but I left most of them throughout this year. You didn't need to know that, but it did contribute to the lower response count this year. Most people responded with communities I know of like bha, stoneworks, subworks, and EoS. For those who brought up a good offshoot, you got a point for this question. So probably like almost everyone.</p>
+</div>
+<div class="result border">
+    <h3>Have you ever XML edted?</h3>
+    <p>Once again, simple question, simple answers. Last year, we determined that most people believe XML editing is NOT cheating, which is correct. This year, we continued on this, with an astounding <b>82% answering correctly</b>.</p>
+    <p>I miss the funny responses to this from last year though.</p>
+</div>
+<div class="result border">
+    <h3>Do you think using SWQolSuite is cheating? If not, what is?</h3>
+    <p>This is a loaded question, really. <a href="https://github.com/HvTcCore/swQolSuite">SWQolSuite (github.com)</a> is a program that allows players to accomplish tasks normally disallowed, such as XML editing in-game, disabling placement checks (to place blocks anywhere, even inside other blocks), and much more.</p>
+    <p>Because it's a program of such nature, it is rather divisive. I really couldn't tell you what % think it's cheating or not, but I'd say &lt50% think so. Some of my favorite responses to this include:</p>
+    <ul>
+        <li><p>The hell even is that</p></li>
+        <li><p>Yes</p></li>
+        <li><p>nothing is cheating. except for being better than me</p></li>
+        <li><p>It's a sandbox game you can't cheat at sand</p></li>
+        <li><p>ehh actually FUCK component mods that shit gross</p></li>
+        <li><p>Terms of service? more like uhhhhhhhhhh terms of shitvice haha</p></li>
+    </ul>
+    <p>Of course, to get points for this question you had to say no it isn't cheating, because as most responses agree, Stormworks is a sandbox game, you can play how you want. Cheating detriments the experience of other players.</p>
+</div>
+<div class="result border">
+    <h3>Favorite 3 major updates?</h3>
+    <p>You people do not know what a major update is. Sorry, as much as it may have changed your building experience, the ammo belt update was minor. Another thing I noticed is that recency bias is very strong, people tended to list updates from the last year that they heavily remember. Top contenders for favorite major update align closely with last year: Weapons, modular engines, and whatever the 3 most recent updates are.</p>
+    <p>I'd put a picture here, but there's too many! So instead, you get my favorite responses again!</p>
+    <ul>
+        <li><p>what major updates</p></li>
+        <li><p>Fih, oil, guns</p></li>
+        <li><p>The one where they added the shitty sirens</p></li>
+        <li><p>The animal one</p></li>
+        <li><p>Space DLC</p></li>
+        <li>Modding, Modding, </li>
+    </ul>
+</div>
+<div class="result border">
+   <h3>What do you hope the NEXT major update is?</h3>
+   <p>Stormworks is a popular game, and this means people want a lot of things. The game has reached a pretty complete state, which means that most answers to this question were mundane, or "bug fixes." Some of the best include:</p>
+   <ul>
+        <li><p>Breaking bad update</p></li>
+        <li><p>Fixing the damn game</p></li>
+        <li><p>i dont care</p></li>
+        <li><p>Multiplayer optimization</p></li>
+        <li><p>france.</p></li>
+        <li><p>Sex (this was said nine times)</p></li>
+        <li><p>clanker expansion</p></li>
+   </ul>
+</div>
+<div class="result border">
+    <h3>Are you excited for Not Stormworks 2?</h3>
+    <p>Geometa, the people behind Stormworks, have said publicly they have a new game coming soon, dubbed "Not Stormworks 2". We know little about this game, only that it is another vehicle building sandbox, uses a new in-house game engine, and will be better for smaller creations than Stormworks.</p>
+    <p>Of course you should be excited for it! After all, it's not like they could <i>possibly</i> break a game more than Stormworks (This is the real opinion of real Stormworkers). <b>77 (65%) answered correctly</b>, saying they are excited. To those who aren't excited, are you really satisfied with Stormworks? Or do you simply distrust Geometa to make... anything? Have some faith!</p>
+    <img src="./../../assets/img/polls/christmas25/3.png">
+</div>
+<div class="result border">
+    <h3>What is the WORST warcrime you have committed in Stormworks?</h3>
+    <p>Ho ho ho! I waited to do this one. Ever since we found out that 80% of players commit warcrimes last year, I just couldn't help but ask <i>what</i> crimes get committed in this wonderful game we play. It turns out, some wild ones! The most common ones had something to do with the hospital ship, servers, or murdering innocent civilians. Some of my favorites include:</p>
+    <ul>
+        <li><p>I was a bit pissed off with my friends actions, so i spammed radiation to insta kill them. So basically its spawn camping, and at the end one of them didnt had his craft saved, so he had to redo like 1.5 hour work once again :( </p></li>
+        <li><p>...Lets say a few babies were gone that day...</p></li>
+        <li><p>Violating conservation of energy.</p></li>
+        <li><p>Illegal overtake under a yellow flag</p></li>
+        <li><p>I built a Christmas tree shaped missile that blasted All I Want for Christmas is You</p></li>
+        <li><p>Worst? there can be bad ones?</p></li>
+        <li><p>Accidentally dropping civillians into the ocean when cleaning up vehicles.</p></li>
+        <li><p>LETTING ARIDISTAN CITIZENS LIVE</p></li>
+        <li><p>Turning the hospital boat to a hospital car</p></li>
+    </ul>
+    <p>And some things that would probably put me on an FBI list if I mentioned them here.</p>
+    <p>Moving on...</p>
+</div>
+<div class="result border">
+    <h3>Least favorite vehicle type?</h3>
+    <p>Asking for people's favorite vehicle type is boring, it's all trains and jets anyway, or a Project 710 class fast attack nuclear submarine. I want to know what you hate! What kind of vehicles are absolutely despised in the Stormworks community? What should I NEVER make? Top responses include:</p>
+    <ul>
+        <li><p>autismomobiles</p></li>
+        <li><p>boyfriends</p></li>
+    </ul>
+    <p>Oh, people took it seriously. Crap. It turns out that ironically the top answers were trains and jets. The train and jet autists are confusing people. While Louisville didn't make it this year, cope vehicles certainly did. Damn I need to think of funnier questions next time.</p>
+</div>
+<h2>Almost there...</h2>
+<div class="result border">
+    <h3>Is the official Discord a good place?</h3>
+    <p>The official Stormworks Discord is a mixed bag. On one hand, it's the largest gathering of Stormworkers, and a great place to get help. On the other hand, it's full of toxic people (the community helpers), drama (the community helpers), and general nonsense (the community helpers). So is it a good place? <b>61 people (51%)</b> said no, it's a terrible place. The rest are wrong.</p>
+    <p>I know, a lot of people (those who aren't in any sub-communities) are going to say "What's wrong with SWO?" And to answer that, may I invite you to Subworks, SRC, or a place even worse, the Reddit Discord?</p>
+    <img src="./../../assets/img/polls/christmas25/4.png">
+    <p>Seriously why is it so 50/50</p>
+</div>
+<div class="result border">
+    <h3>How many hours do you have?</h3>
+    <p>lol</p>
+    <img src="./../../assets/img/polls/christmas25/5.png">
+    <p>I don't have much to say. The average hour count lowered compared to last year. I blame putting the poll in SWO fan art where more people with 0 hours will see it. Fortunately, <b>91 (76%) people are in the correct range.</b></p>
+</div>
+<div class="result border">
+    <h3>What SW nation ar you loyal to?</h3>
+    <p>This was 100% intended to be a fully rigged question. The options were "Aridistan" <b>(which 27 (23%) people got right)</b>, or wrong. I gave 4 people credit for funny answers. I want to shoutout the 2 people who said "Arstotzka" and everyone who submitted their own nations, the Stormworks nation lore goes deeper than I thought. To everyone who said none or similar, shame on you. Become an Aridistan nationalist today. "Man I just build vehicles" yeah and what's wrong with putting a flag on a vehicle once in a while?</p>
+</div>
+<div class="result border">
+    <h3>When making a modular engine control unit, would you use Logic or Lua?</h3>
+    <p>This was a rehash of last year's "Logic or Lua" question. Same answer, Lua. And most people still got it wrong. Maybe next year I'll do "When making a radar screen, would you use Logic or Lua" and still watch people hate on Lua.</p>
+    <img src="./../../assets/img/polls/christmas25/6.png">
+    <p>While I do get the disdain against Lua, I think most people just think "code scary" without realizing that code is nothing like they see in the movies. Oh well, one day I'll reach these people. With that, <b>56 people (47%) of people answered correctly</b>, and they will build the superior engine controller.</p>
+</div>
+<div class="result border">
+    <h3>Do you play on Linux?</h3>
+    <img src="./../../assets/img/polls/christmas25/7.png">
+    <p>Those poor suckers on macOS lol. I'm actually kind of surprised by how many people play on Linux - 15 of them exist according to this poll! And while I was told off to the Linux Council for dissing against Linux and am no longer allowed to use Proton, I can say that if you use an AMD GPU, it actually might be worth it to use Linux with how much AI shit Windows has now.</p>
+    <p>Fortunately, <b>99 people (83%) still play on Windows</b>.</p>
+</div>
+<div class="result border">
+    <h3>What would you like from Santy this year?</h3>
+    <p>Finally, the motherload. What would you like for Christmas? I know not everyone celebrates it, but everyone is able to answer what they'd like from a magical skill issue in the arctic who can somehow deliver presents to all Stormworkers in just two and a half weeks.</p>
+    <p>This finally had some funny responses, the best of the whole damn poll. Some of our favorites include:</p>
+    <ul>
+        <li><p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3611288035">A 2026 SentyTek Aita</a> (steamcommunity.com)</p></li>
+        <li><p>HRT</p></li>
+        <li><p>femboy ASS</p></li>
+        <li><p>That fat ass you have 😛😛😛😛😛 </p></li>
+        <li><p>one million dollars</p></li>
+        <li><p>A friend</p></li>
+        <li><p>The end of the AI bubble</p></li>
+        <li><p>Will to play Stormworks again</p></li>
+    </ul>
+    <p>There were a lot of good responses, with plenty that made the elf and I laugh. We thank everyone who responded to the poll, you make these recaps possible.</p>
+</div>
+<div class="result border">
+    <h2>What about presents?!?!</h2>
+    <p>Damn right, I still have presents.</p>
+    <img src="./../../assets/img/polls/christmas25/8.jpg">
+    <p>Nine possible presents this year based on your poll score, including a top result that NO ONE will get! I am so evil! No effort was put into any of them, and the four of us who helped make them, we hope you enjoy whatever you do get.</p>
+</div>
+<div class="result border">
+    <h2>Honorable Mentions</h2>
+    <p>Shoutout to everyone who was nice this year, we heart you!</p>
+    <p>To everyone who put emoji in your response, me and my Python still don't like you one bit.</p>
+    <p>119 total responses, 1870 answers, 833 manually graded answers.</p>
+    <p>Unfortunately, Trapdoor nor Deltars did the poll this year :(</p>
+    <p>The two people who got 0/17: L + Ratio</p>
+    <p>To everyone who missed it this year, we might do it again next year, just take a look at various SW servers in early December.</p>
+    <p>And of course, thank you for reading and for participating! We wouldn't do these polls if we didn't get your support. I won't ask for anything in return, just keep being awesome.</p>
+</div>
+<br>
+<br><br>
+<div class="centered">
+    <h2>Take a look at your results</h2>
+    <div class="buttonBox" style="position:relative; left:20vw;">
+        <button onclick="userRedirect('./c25personalized.html')"><h3>Let's go</h3></button>
+    </div>
+</div>
+
+<div id="imageModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+</div>
+<script src="./../../polls/js/buttonhandler.js"></script>
+<script src="./../../polls/js/modalhandler.js"></script>

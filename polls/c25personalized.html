@@ -1,0 +1,176 @@
+---
+layout: default
+title: SW 2 Naughty 2 Nice 25
+style: ../../styles/style.css
+desc: Get personalized Naughty or Nice results for Stormworks 2 Naughty 2 Nice '25 event!
+fullTitle: Stormworks 2 Naughty 2 Nice '25
+pathFavicon: ../../assets/SFB-4.png
+pathIndex: ../../index
+---
+
+<link rel="stylesheet" href="../../styles/style.css">
+<div class="pageNoBG">
+    <div class="buttonBox">
+        <button onClick="userRedirect('./christmas25.html')"><h3>Back to Results</h3></button>
+    </div>
+    <div class="recap">
+        <div class="centered">
+            <h1>Let's take a look at your personalized results</h1>
+            <h2>We've loaded all your data in. After crunching some numbers and checking the list twice, we've determined if you're naughty or nice, and given you a present to match you perfectly.</h2>
+            <h3>Ready to see what you've got?</h3>
+            <div id="poem">
+            </div>
+        </div>
+    </div>
+    <div class="selection">
+        <h3>Enter the username you submitted on the quiz:</h3>
+        <div class="holder">
+            <input type="text" class="searchbox" id="searchbox" placeholder="Search names..." autocomplete="off">
+            <div class="submitbutton" id="submitbutton"><h3>Submit</h3></div>
+        </div>
+        <div class="dropdown" id="namelist"></div>
+    </div>
+    <div class="errbox" id="errbox">
+    <p id="errmsg">User not found</p>
+    </div>
+    <div class="results" id="results">
+        <div class="result border">
+            <h1>Let's see here. Halfway down the list or so...</h1>
+            <h2 class="notbold">Aha! Found you! After little consideration from the elves, you were marked <span id="result0" class="type0">21</span>. Great job.</h2>
+            <p>Why? Well. Uh. Lemme see. Uhh. You're <span id="result19" class="type15"></span></p>
+            <p id="result0type0"></p>
+            <br>
+        </div>
+        <div class="result border">
+            <h1>Now let's gauge your self worth</h1>
+            <h2 class="notbold">After what I'm sure was much deliberation, you deemed yourself to be <span id="result1" class="type1">4</span></h2>
+            <p id="result1type1"></p>
+            <br>
+        </div>
+        <div class="result border">
+            <h1>Grand Theft Stormworks</h1>
+            <h2 class="notbold">We've all been there. Wait- Scratch that, my lawyers are telling me otherwise. My sources (you) are telling me that you <span id="result2" class="type2">5</span></h2>
+            <p id="result2type2">As fun as stealing people's hard work may be <b>(20% are thiefs)</b>, we both know that's just not okay.</p>
+            <br>
+        </div>
+        <div class="result border">
+            <h1>Propulsion. The final frontier</h1>
+            <h2 class="notbold">As I said earlier, one of Stormworks's strong points is just how many different ways you can make a vehicle move in this game. Turns out, your favorite is <span id="result3" class="type3">6</span>. Incredible, honestly.</h2>
+            <p id="result3type3"></p>
+            <br>
+        </div>
+        <div class="result border">
+            <h1>Stormworks Discords</h1>
+            <h2 class="notbold">There's a lot of places for Stormworkers to gather. Most players join a Discord or two for one reason or another. And you? You said <span id="result4" class="type4">7</span>, which is of course based.</h2>
+            <p id="result4type4">The only community I'm loyal to is the North Pole.</p>
+            <br>
+        </div>
+        <div class="result border">
+            <h1>XML Editing. Gotten less controversial?</h1>
+            <h2 class="notbold">You said you do <span id="result5" class="type5">8</span></h2>
+            <p id="result5type5"></p>
+            <br>
+        </div>
+        <div class="result border">
+            <h1>Is SWQolSuite considered cheating?</h1>
+            <h2 class="notbold">You said <span id="result6" class="type6">9</span></h2>
+            <p id="result6type6">Well, I can't argue with that logic. This is the divisive question this year isn't it. Good thing it got Deltars' blessing during stream.</p>
+        </div>
+        <div class="result border">
+            <h1>It turns out, we do all <i>love</i> Stormworks updates.</h1>
+            <h2 class="notbold">If you were to ask me, I'd say modular jets, modular engines, and modular modding. Wait, was I not supposed to say that? Whoops. Fortunately, you only know of updates that do exist. Your favorite updates, according to you, are <span id="result7" class="type7">10</span></h2>
+            <p id="result7type7"></p>
+        </div>
+        <div class="result border">
+            <h1>Next updates??</h1>
+            <h2 class="notbold">SEASON TWO???? How would you react if Stormworks got season two? Who knows, that's not this question! For the future of Stormworks, most people wanted multiplayer fixes. You wanted <span id="result8" class="type6">11</span></h2>
+            <p id="result8type6">Good choice. I want that as well.</p>
+        </div>
+        <div class="result border">
+            <h1>Stormworks: 2 Build 2 Rescue</h1>
+            <h2 class="notbold">While Stormworks 2 isn't happening, they are still making a new game. You said you <span id="result9" class="type8">12</span>.</h2>
+            <p id="result9type8"></p>
+        </div>
+        <div class="result border">
+            <h1>Your worst <s>nightmare</s> war crime.</h1>
+            <h2 class="notbold">Most of the fun of Stormworks comes from these acts of terror. You said your worst was <span id="result10" class="type6">13</span>. Nice.</h2>
+            <p id="result10type6">Webster's Dictionary defines a war crime as "a crime (such as genocide or maltreatment of prisoners) committed during or in connection with war." Are any of these during wartime?</p>
+        </div>
+        <div class="result border">
+            <h1><b>Least</b> favorite vehicle</h1>
+            <h2 class="notbold">Everyone has that one vehicle type they just can't stand. Yours is <span id="result11" class="type7">14</span>.</h2>
+            <p id="result11type7"></p>
+        </div>
+        <div class="result border">
+            <h1>"Join us on Discord" they said. "It'll be fun!" they said.</h1>
+            <h2 class="notbold">Is the official Stormworks Discord a good place to be? You said <span id="result13" class="type6">16</span>. Wrong.</h2>
+            <p id="result13type6">Too many kids asking why their ship won't sink. It's awful. <b>51% answered correctly</b>, saying it's bad.</p>
+        </div>
+        <h1>Home stretch...</h1>
+        <div class="result border">
+            <h1>Hour count</h1>
+            <h2 class="nobold">How many hours have YOU logged in Stormworks? <span id="result14" class="type9">17</span>, apparently</h2>
+            <p id="result14type9"></p>
+        </div>
+        <div class="result border">
+            <h1>National Loyalty</h1>
+            <h2 class="notbold">Hahahaha. What a mistake asking this. What Stormworks nation are you loyal to? <span id="result15" class="type7">18</span>, huh? Why?</h2>
+            <p id="result15type7"></p>
+        </div>
+        <div class="result border">
+            <h1>Logic or Lua?</h1>
+            <h2 class="notbold">I was having a conversation the other year about how great Lua is. And I learned that some people simply refuse to acknowledge that coding is something that you can learn. When it comes to making engine controllers, you prefer <span id="result16" class="type10">19</span>.</h2>
+            <p id="result16type10"></p>
+        </div>
+        <div class="result border">
+            <h1>2026 will be the year of the Linux desktop, trust me.</h1>
+            <h2 class="notbold">Linux has gained popularity recently due to it being better than Windows. And believe it or not, some people actually do use this alien operating system. And some, don't even know what the hell I'm talking about. Do you play on Linux? You said <span id="result17" class="type11">20</span></h2>
+            <p id="result17type11"></p>
+        </div>
+        <br><hr><br>
+        <div class="result border">
+            <h1>Christmas Wishlist</h1>
+            <h2 class="notbold">Finally, what would you like for Christmas this year? You said <span id="result12" class="type7">15</span></h2>
+            <p id="result12type7">Interesting choice. I'll see what I can do.</p>
+        </div>
+        <div class="result border">
+            <h1>Wait? What's this?</h1>
+            <h2 class="notbold">Holy moly! Santy left a note, just for you! See, this is why we leave cookies and milk out for Santy! Quick! What did he say???</h2>
+            <p>"<span id="result18" class="type6">24</span>"<br>Merry Christmas, Santy</p>
+        </div>
+        <div class="result">
+            <h1>Overview</h1>
+            <h2 class="notbold">All in all, you were marked <span id="result20" class="type6">21</span> this year, with a quiz score of <span id="result21" class="type13">22</span>.</h2>
+        </div>
+        <div class="result">
+            <h1>Your present</h1>
+            <h2 class="notbold">Gah! I almost forgot about the presents! After combobulating all the discombobulators, We've grandly decided that your gift this year is a <b><span id="result22" class="type14">22</span></b>. Congratulations.</h2>
+            <p id="result22type14"></p>
+        </div>
+        <div class="result" style="float:left; margin-left: 5vw;">
+            <div class="buttonBox" style="float: left; margin-right: 5vw; margin-bottom: 5vw;">
+                <button onclick="downloadPdf()"><h3>Download Responses</h3></button>
+            </div>
+            <div class="buttonBox" style="float: left; margin-right: 5vw; margin-bottom: 5vw;">
+                <button onclick="downloadCert()"><h3>Download Certficate</h3></button>
+            </div>
+            <div class="buttonBox" style="float: left;">
+                <button onclick="downloadGift()"><h3>Download Present</h3></button>
+            </div>
+        </div>
+        <div class="result" style="width:80%;position: relative; top:-5vw;">
+            <p><i>Present goes in <span class="code">%appdata%/Stormworks/data/vehicles</span> (press <span class="code">win + r</span> and put in that address.)</i></p>
+            <p><i>For macOS: <span class="code">~/Library/Application Support/Stormworks/data/vehicles</span></i></p>
+        </div>
+    </div>
+</div>
+
+<div id="imageModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+</div>
+<script src="./../../polls/js/buttonhandler.js"></script>
+<script src="./../../polls/js/modalhandler.js"></script>
+<script src="./../../polls/js/christmas25.js"></script>
