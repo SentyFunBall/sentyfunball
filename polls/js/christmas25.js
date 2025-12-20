@@ -1,5 +1,6 @@
 let server = "https://christmas-25.uc.r.appspot.com"
 let selectedName = "";
+let jsonPath = "../js/random.json";
 
 
 //Fetches names from backend
@@ -48,7 +49,7 @@ function getRandomInt(max) {
 
 async function setPoem() {
     const poemDiv = document.getElementById("poem");
-    const response = await fetch("./js/random.json");
+    const response = await fetch(jsonPath);
     const randoms = await response.json();
 
     poemDiv.innerHTML = `<p><em>${randoms["1"][getRandomInt(4)]}</em></p>`;
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     async function updateResults(userData) {
         if(userData) {
             console.log("Updating page with user data");
-            const response = await fetch("./js/random.json");
+            const response = await fetch(jsonPath);
             const randoms = await response.json();
             const questions = userData.questions
             
