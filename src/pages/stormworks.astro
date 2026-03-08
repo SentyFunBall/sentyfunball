@@ -1,0 +1,117 @@
+---
+import TitlePage from '@/components/TitlePage'
+import BaseLayout from '@/layouts/BaseLayout'
+import CustomImage from '@/components/CustomImage'
+import SmallImageButton from '@/components/SmallImageButton'
+import { getPosts } from '@/utils'
+import { siteConfig } from '@/site-config'
+
+const MAX_POSTS = 5 // max number of posts to show on the home page
+const posts = await getPosts(MAX_POSTS)
+---
+
+<BaseLayout title='Stormworks' showTags={false}>
+	<TitlePage title={siteConfig.title} extra=' in Stormworks' />
+	<CustomImage imagePath='/src/assets/images/heros/stormworks_hero.jpg' altText='Stormworks Hero' />
+
+	<div class='w-full'>
+		<h1 class='text-6xl font-bold'>Explore Automotive</h1>
+		<div class='flex flex-wrap gap-8 mt-8 justify-start'>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_aita.png'
+				label='Aita'
+				badge='New'
+				href='/stormworks/aita'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_echo.png'
+				label='Echolodia'
+				href='/stormworks/echolodia'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_te.png'
+				label='Echolodia TE'
+				href='/stormworks/echolodia-te'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_peregrine.png'
+				label='Peregrine'
+				href='/stormworks/peregrine'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_solstice.png'
+				label='Solstice'
+				href='/stormworks/solstice'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_descheeto.png'
+				label='Descheeto'
+				href='/stormworks/descheeto'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_car6.png'
+				label='SenCar 6'
+				href='/software/sencar-6'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/icons/icon_plus.svg'
+				label='Accessories'
+				href='/stormworks/accessories'
+				class='[&>svg]:[filter:invert(47%)_sepia(98%)_saturate(400%)_hue-rotate(191deg)_brightness(100%)]'
+			/>
+		</div>
+
+		<h1 class='text-6xl font-bold mt-40'>Explore Others</h1>
+		<div class='flex flex-wrap gap-8 mt-8 justify-start'>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_swrt.png'
+				label='SWRT 11'
+				href='/stormworks/swrt-11'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_h80.png'
+				label='Horizon 80'
+				href='/stormworks/horizon-80'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_kei.png'
+				label='SenKei'
+				href='/stormworks/senkei'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_stsc.png'
+				label='SentyTek Service Centers'
+				href='/stormworks/service-centers'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_theater.png'
+				label='SentyTek Theater'
+				href='/stormworks/theater'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/icons/icon_rnd_real.svg'
+				label='R&D'
+				href='/stormworks/rnd'
+				class='[&>svg]:[filter:invert(45%)_sepia(98%)_saturate(400%)_hue-rotate(191deg)_brightness(100%)]'
+			/>
+		</div>
+	</div>
+</BaseLayout>
+
+<script>
+	import { animate } from 'motion'
+	const showAnimations = localStorage.getItem('animations') === 'true'
+
+	if (showAnimations) {
+		animate(
+			'.title',
+			{ y: [80, 0], opacity: [0, 1] },
+			{
+				duration: 2.5,
+				opacity: { duration: 3 },
+
+				offset: [0, 0.55, 0.75]
+			}
+		)
+	}
+</script>

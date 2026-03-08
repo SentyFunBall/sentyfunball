@@ -1,0 +1,237 @@
+---
+import CustomImage from '@/components/CustomImage'
+import ImageCarousel from '@/components/ImageCarousel'
+import CardCarousel from '@/components/CardCarousel'
+import StickyHeader from '@/components/StickyHeader'
+import BaseLayout from '@/layouts/BaseLayout'
+
+const SITE_TITLE = 'Aita'
+---
+
+<BaseLayout title={SITE_TITLE}>
+	<StickyHeader
+		title='Aita'
+		buyUrl='https://steamcommunity.com/sharedfiles/filedetails/?id=3611288035'
+		buyLabel='View on Workshop'
+		exploreLabel='Tech Specs'
+		exploreUrl='#specs'
+	/>
+	<div>
+		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
+		<h2 class='text-3xl font-medium mt-4 mb-10'>Power Player</h2>
+		<CustomImage
+			imagePath='/src/assets/blog/aita/aita-hero.jpg'
+			altText='Aita, the new SentyTek car, in all its glory'
+		/>
+		<div class='flex justify-center mt-10'>
+			<div
+				class='w-fit px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+			>
+				<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=3611288035' target='_blank'
+					>View on Workshop</a
+				>
+			</div>
+		</div>
+
+		<article class='prose-xl w-full max-w-none mt-8'>
+			<h2 class='text-4xl font-bold'>Get the highlights</h2>
+			<CardCarousel>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<p class='text-4xl mb-3'>🖥️</p>
+					<h4 class='text-xl font-bold mb-2'>4 Dashboard Layouts</h4>
+					<p class='text-gray-600 dark:text-gray-300'>
+						Choose from Minimal, Widget, Radio, and Central Display — each redesigned with EV-first
+						iconography.
+					</p>
+				</div>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<p class='text-4xl mb-3'>🎨</p>
+					<h4 class='text-xl font-bold mb-2'>7 Color Themes</h4>
+					<p class='text-gray-600 dark:text-gray-300'>
+						Pick your vibe. Seven themes with per-theme hue adjustments so your dash matches your
+						style.
+					</p>
+				</div>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<p class='text-4xl mb-3'>🛡️</p>
+					<h4 class='text-xl font-bold mb-2'>Safety Suite</h4>
+					<p class='text-gray-600 dark:text-gray-300'>
+						Automatic Emergency Braking, dead man's switch, and radar-driven Autopilot keep you and
+						others safe.
+					</p>
+				</div>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<p class='text-4xl mb-3'>🔗</p>
+					<h4 class='text-xl font-bold mb-2'>SenConnect 1.2</h4>
+					<p class='text-gray-600 dark:text-gray-300'>
+						Stay connected to other SentyTek vehicles in real time — perfect for convoys, caravans,
+						and parties.
+					</p>
+				</div>
+			</CardCarousel>
+
+			<p><strong>A brand new car, in a brand new era</strong></p>
+			<p>
+				Aita is SentyTek's first new vehicle platform in a while, and we wanted to redefine what a
+				SentyTek car is. Aita ushers in a new era of SentyTek, being our first ever true sedan and
+				fully electric platform, engineered and developed entirely in-house. Aita is our most
+				ambitious fusion of hardware and software yet, purpose built for the future of Stormworks.
+			</p>
+			<h2>Exterior</h2>
+
+			<CustomImage
+				imagePath='/src/assets/blog/aita/exterior.jpg'
+				altText='The exterior of the car or something'
+			/>
+
+			<p>
+				Aita's shape is gorgeous, with an elegant teardrop shape and a new front facade with no
+				grille. New DRL designs illuminate the car from the front, and new steerable low and high
+				beams track the road effortlessly. A first-ever panoramic glass sunroof allows your
+				passengers to look up at the stars while driving. Even the charge port is thoughtfully
+				designed, folding cleanly into the body and every door opening with grace. Front and rear
+				storage trunks give you space for camping, the weekend, or hauling. Its skateboard chassis
+				lets Aita fly around the track.
+			</p>
+
+			<h2>Inside</h2>
+
+			<CustomImage
+				imagePath='/src/assets/blog/aita/interior-dashboard.jpg'
+				altText='The interior of the car with the wonderful SenCar 6 dashboard'
+			/>
+
+			<p>
+				Step in and everything feels similarly modern but refined, built around our next generation
+				of software: SenCar 6. The EV specific dashboard presents only what matters - speed, range,
+				efficiency, and power - nothing distracting. SenConnect keeps you connected to other
+				SentyTek vehicles in real time, perfect for convoys or parties. Rear seat passengers get a
+				brand new multiplayer tic-tac-toe experience, making long trips short. Aita seats 5, the
+				rear seats fold down, and there's a map.
+			</p>
+
+			<h2>Power</h2>
+
+			<CustomImage
+				imagePath='/src/assets/blog/aita/skateboard.jpg'
+				altText='The powertrain of the car, with four wheels, two drive units, and the microcontroller platform'
+			/>
+
+			<p>
+				At the heart of Aita is our first ever dual-electric drive motor system on an
+				all-wheel-drive platform engineered by us from zero to hero. Two motors give Aita sports car
+				acceleration, 0-60 in just 3.8 seconds in Sport mode. A simulated high voltage battery
+				powers the drive units and gives Aita a realistic battery experience and range. Regenerative
+				braking captures up to 20% of the energy of the vehicle to extend range and give the car a
+				great driving experience, along with new Ackermann steering geometry.
+			</p>
+
+			<p>
+				A new second generation drive computer ties everything together, with smoother throttle
+				curves, independent axle control, launch modes, tuning, and of course driving the two
+				motors.
+			</p>
+
+			<h2>SenCar 6</h2>
+
+			<ImageCarousel
+				images={[
+					{ path: '/src/assets/blog/aita/car6.jpg', alt: 'The SenCar 6 dashboard' },
+					{
+						path: '/src/assets/blog/aita/interior-carapp.jpg',
+						alt: 'The Car app, with many options to customize your car'
+					},
+					{ path: '/src/assets/blog/aita/rear.jpg', alt: 'The rear view of the car' },
+					{ path: '/src/assets/blog/aita/tictac.jpg', alt: 'The rear seats with Tic-Tac-Toe game' }
+				]}
+			/>
+
+			<p>
+				SenCar 6 is our revolutionary car operating system. It completely changes how you interact
+				with a car. With 4 gorgeous dashboard layouts, 7 wonderful color themes with new hue
+				adjustments, and dozens of new options for Aita. The dashboard has four layouts, each with
+				new EV iconography for Aita. The widget display gives extra information for power users, the
+				Radio Display allows control of the car radio, and the Central Display gives all the car
+				controls, the map, the weather, and settings.
+			</p>
+
+			<p>
+				Automatic headlights. Dark Mode. Rave Mode. Single tap startup. Autopilot driven by radar. A
+				dead man's switch. Automatic Emergency Braking. Radio Lock-unlock. Sport and Eco modes. It
+				just works.
+			</p>
+
+			<h3>So much more</h3>
+
+			<ul>
+				<li>Self presenting doors</li>
+				<li>Enhanced trip stats</li>
+				<li>Low fuel/battery alarms</li>
+				<li>Developer support</li>
+				<li>Open source</li>
+				<li>Tons of settings</li>
+				<li>Horn</li>
+			</ul>
+
+			<p>
+				<a href='https://github.com/SentyFunBall/SW-SenCar'
+					>SenCar 6 Source Code &amp; Dev updates</a>
+			</p>
+
+			<h2 id='specs'>Specs</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Spec</th>
+						<th>Value</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Engine</td>
+						<td>Dual-motor</td>
+					</tr>
+					<tr>
+						<td>OS</td>
+						<td>SenCar 6 with SenConnect 1.2</td>
+					</tr>
+					<tr>
+						<td>ECU</td>
+						<td>Drive Computer 2</td>
+					</tr>
+					<tr>
+						<td>Top Speed</td>
+						<td>135 mph / 215 kmh</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Micros used</h3>
+
+			<ul>
+				<li>SenCar v6.2</li>
+				<li>Drive Computer v2</li>
+				<li>SenConnect v1.2</li>
+			</ul>
+		</article>
+	</div>
+</BaseLayout>
+
+<script>
+	import { animate } from 'motion'
+	const showAnimations = localStorage.getItem('animations') === 'true'
+
+	if (showAnimations) {
+		animate(
+			'.title',
+			{ y: [80, 0], opacity: [0, 1] },
+			{
+				duration: 2.5,
+				opacity: { duration: 3 },
+
+				offset: [0, 0.55, 0.75]
+			}
+		)
+	}
+</script>

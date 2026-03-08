@@ -1,0 +1,57 @@
+---
+import TitlePage from '@/components/TitlePage'
+import CustomImage from '@/components/CustomImage'
+import BaseLayout from '@/layouts/BaseLayout'
+import SmallImageButton from '@/components/SmallImageButton'
+import { siteConfig } from '@/site-config'
+---
+
+<BaseLayout title='Software'>
+	<TitlePage title={siteConfig.title} extra=' Software' />
+	<CustomImage imagePath='/src/assets/images/heros/software_hero.jpg' altText='Software' />
+
+	<div class='w-full'>
+		<h1 class='text-6xl font-bold'>Software</h1>
+		<div class='flex flex-wrap gap-8 mt-8 justify-start'>
+			<SmallImageButton
+				imagePath='/src/assets/images/placeholder-hero.jpg'
+				label='Syngine'
+				badge='New'
+				href='/software/syngine'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_car6.png'
+				label='SenCar 6'
+				href='/software/sencar-6'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_sc.png'
+				label='SenConnect'
+				href='/software/senconnect'
+			/>
+			<SmallImageButton
+				imagePath='/src/assets/images/thumbs/thumb_senui.png'
+				label='SenUI'
+				href='/software/senui'
+			/>
+		</div>
+	</div>
+</BaseLayout>
+
+<script>
+	import { animate } from 'motion'
+	const showAnimations = localStorage.getItem('animations') === 'true'
+
+	if (showAnimations) {
+		animate(
+			'.title',
+			{ y: [80, 0], opacity: [0, 1] },
+			{
+				duration: 2.5,
+				opacity: { duration: 3 },
+
+				offset: [0, 0.55, 0.75]
+			}
+		)
+	}
+</script>

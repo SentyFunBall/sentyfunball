@@ -1,0 +1,113 @@
+---
+// Usage:
+//   <CardCarousel>
+//     <div>...html for card 1...</div>
+//     <div>...html for card 2...</div>
+//   </CardCarousel>
+---
+
+<div class='w-full py-10'>
+	<card-carousel class='relative block'>
+		<div class='carousel-track relative overflow-hidden rounded-xl'>
+			<slot />
+		</div>
+		<!-- controls injected by JS below -->
+	</card-carousel>
+</div>
+
+<script>
+	class CardCarousel extends HTMLElement {
+		constructor() {
+			super()
+
+			const track = this.querySelector<HTMLElement>('.carousel-track')!
+			const cards = Array.from(track.children) as HTMLElement[]
+
+			if (cards.length <= 1) return
+
+			let current = 0
+
+			// Stack all cards in the same grid cell so they overlap;
+			// crossfade is pure opacity — the track background never changes
+			track.style.display = 'grid'
+			let zCounter = 0
+			cards.forEach((card, i) => {
+				card.style.gridColumn = '1'
+				card.style.gridRow = '1'
+				card.style.transition = 'opacity 0.35s ease'
+				card.style.opacity = i === 0 ? '1' : '0'
+				card.style.zIndex = i === 0 ? '1' : '0'
+				card.style.pointerEvents = i === 0 ? '' : 'none'
+			})
+
+			// --- build prev button ---
+			const makeBtn = (label: string, svgPath: string) => {
+				const btn = document.createElement('button')
+				btn.setAttribute('aria-label', label)
+				btn.className =
+					'absolute top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 hover:bg-black/75 text-white transition-colors'
+				btn.style.cssText = label === 'Previous card' ? 'left:0.75rem' : 'right:0.75rem'
+				btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="${svgPath}" clip-rule="evenodd"/></svg>`
+				return btn
+			}
+			const prevBtn = makeBtn(
+				'Previous card',
+				'M15.28 5.22a.75.75 0 0 1 0 1.06L9.56 12l5.72 5.72a.75.75 0 1 1-1.06 1.06l-6.25-6.25a.75.75 0 0 1 0-1.06l6.25-6.25a.75.75 0 0 1 1.06 0Z'
+			)
+			const nextBtn = makeBtn(
+				'Next card',
+				'M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.75.75 0 0 1 1.06-1.06l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z'
+			)
+			track.appendChild(prevBtn)
+			track.appendChild(nextBtn)
+
+			// --- build dot indicators ---
+			const dotsRow = document.createElement('div')
+			dotsRow.className = 'flex justify-center gap-2 mt-4'
+			const dots = cards.map((_, i) => {
+				const d = document.createElement('button')
+				d.className = 'w-2.5 h-2.5 rounded-full transition-colors bg-gray-300 dark:bg-gray-600'
+				d.setAttribute('aria-label', `Go to card ${i + 1}`)
+				dotsRow.appendChild(d)
+				return d
+			})
+			this.appendChild(dotsRow)
+
+			const FADE_MS = 350
+			const goTo = (index: number) => {
+				const outgoing = current
+				current = ((index % cards.length) + cards.length) % cards.length
+				if (current === outgoing) return
+
+				dots[outgoing].style.backgroundColor = ''
+				dots[current].style.backgroundColor = 'rgb(14 165 233)' // sky-500
+
+				// Incoming card goes on top and fades in; outgoing stays opaque beneath
+				cards[current].style.zIndex = String(++zCounter)
+				cards[current].style.opacity = '0'
+				cards[current].style.pointerEvents = ''
+
+				// Trigger reflow so the opacity:0 is painted before we transition to 1
+				void cards[current].offsetWidth
+
+				cards[current].style.opacity = '1'
+
+				// Once the incoming card is fully opaque, hide the outgoing one
+				setTimeout(() => {
+					cards[outgoing].style.opacity = '0'
+					cards[outgoing].style.pointerEvents = 'none'
+				}, FADE_MS)
+			}
+
+			prevBtn.addEventListener('click', () => goTo(current - 1))
+			nextBtn.addEventListener('click', () => goTo(current + 1))
+			dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)))
+
+			dots[0].style.backgroundColor = 'rgb(14 165 233)'
+		}
+	}
+
+	if ('customElements' in window) {
+		customElements.define('card-carousel', CardCarousel)
+	}
+</script>

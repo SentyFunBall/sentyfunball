@@ -1,0 +1,38 @@
+---
+import HomeCard from '@/components/HomeCard'
+import TitlePage from '@/components/TitlePage'
+import FormattedDate from '@/components/FormattedDate'
+import BaseLayout from '@/layouts/BaseLayout'
+import { getPosts } from '@/utils'
+import { siteConfig } from '@/site-config'
+
+const MAX_POSTS = 5 // max number of posts to show on the home page
+const posts = await getPosts(MAX_POSTS)
+---
+
+<BaseLayout title='Home'>
+	<TitlePage title={siteConfig.title} extra='' />
+
+	<div>
+		<HomeCard id={posts[0].id} data={posts[0].data} slug={posts[0].slug} />
+		<HomeCard id={posts[1].id} data={posts[1].data} slug={posts[1].slug} />
+	</div>
+</BaseLayout>
+
+<script>
+	import { animate } from 'motion'
+	const showAnimations = localStorage.getItem('animations') === 'true'
+
+	if (showAnimations) {
+		animate(
+			'.title',
+			{ y: [80, 0], opacity: [0, 1] },
+			{
+				duration: 2.5,
+				opacity: { duration: 3 },
+
+				offset: [0, 0.55, 0.75]
+			}
+		)
+	}
+</script>

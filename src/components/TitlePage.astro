@@ -1,0 +1,28 @@
+---
+import Title from './Title.astro'
+import Logo from './icons/STLogo.astro'
+type Props = {
+	title: string
+	extra: string
+	front?: boolean
+}
+
+const { title, extra, front } = Astro.props
+---
+
+<div class='flex justify-start items-center gap-2 title'>
+	<Logo />
+	{
+		front ? (
+			<Title>
+				{extra}
+				{title}
+			</Title>
+		) : (
+			<Title>
+				{title}
+				{extra}
+			</Title>
+		)
+	}
+</div>

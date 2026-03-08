@@ -1,0 +1,65 @@
+---
+interface Props {
+	title: string
+	buyUrl: string
+	buyLabel?: string
+	exploreUrl?: string
+	exploreLabel?: string
+}
+
+const { title, buyUrl, buyLabel = 'Buy', exploreUrl, exploreLabel = 'Explore' } = Astro.props
+---
+
+<div
+	id='sticky-header'
+	class='fixed top-0 left-0 right-0 z-50 translate-y-[-100%] transition-transform duration-300
+           bg-white/80 dark:bg-[#0a0910]/80 backdrop-blur-md
+           border-b border-gray-200/60 dark:border-gray-800/60'
+>
+	<div class='max-w-6xl mx-auto px-5 sm:px-8 h-12 flex items-center justify-between gap-4'>
+		<span class='font-bold text-md truncate'>{title}</span>
+
+		<div class='flex items-center gap-2 shrink-0'>
+			{
+				exploreUrl && (
+					<a
+						href={exploreUrl}
+						class='px-4 py-1.5 text-sm rounded-full border border-gray-400 dark:border-gray-500
+                           hover:border-gray-700 dark:hover:border-gray-300 transition-colors'
+					>
+						{exploreLabel}
+					</a>
+				)
+			}
+			<a
+				href={buyUrl}
+				target='_blank'
+				class='px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+			>
+				{buyLabel}
+			</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	const header = document.getElementById('sticky-header')
+	if (header) {
+		let ticking = false
+		const SHOW_AFTER_PX = 120
+
+		window.addEventListener('scroll', () => {
+			if (!ticking) {
+				requestAnimationFrame(() => {
+					if (window.scrollY > SHOW_AFTER_PX) {
+						header.classList.remove('translate-y-[-100%]')
+					} else {
+						header.classList.add('translate-y-[-100%]')
+					}
+					ticking = false
+				})
+				ticking = true
+			}
+		})
+	}
+</script>

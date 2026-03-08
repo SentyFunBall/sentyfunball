@@ -1,0 +1,39 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+interface Props {
+	imagePath: string
+	altText?: string
+	width?: number
+	height?: number
+}
+
+const { imagePath, altText = '', width = 1920, height = 1080 } = Astro.props
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	'/src/assets/**/*.{jpeg,jpg,png,gif,webp}'
+)
+if (!images[imagePath]) throw new Error(`Image not found bruh: ${imagePath}`)
+---
+
+<div class='w-full max-w-5xl mx-auto px-4'>
+	<Image
+		src={images[imagePath]()}
+		width={width}
+		height={height}
+		class='w-full h-auto object-cover rounded-lg'
+		alt={altText}
+	/>
+</div>
+
+<>
+	{
+		altText && (
+			<div class='text-center text-sm text-gray-500 dark:text-gray-400 mb-10 mt-5'>
+				<span class='carousel-caption' data-index={0} style=''>
+					{altText}
+				</span>
+			</div>
+		)
+	}
+</>

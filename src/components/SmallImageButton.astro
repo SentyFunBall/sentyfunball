@@ -1,0 +1,80 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+interface Props {
+	imagePath: string
+	label: string
+	alt?: string
+	badge?: string
+	href?: string
+	class?: string
+}
+
+const { imagePath, label, alt = label, badge, href = '#', class: className = '' } = Astro.props
+
+const isSvg = imagePath.endsWith('.svg')
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	'/src/assets/images/**/*.{jpeg,jpg,png,gif,webp}'
+)
+const svgs = import.meta.glob<{ default: string }>('/src/assets/images/**/*.svg', {
+	query: '?raw',
+	import: 'default'
+})
+
+if (isSvg) {
+	if (!svgs[imagePath]) throw new Error(`SmallImageButton: SVG not found: ${imagePath}`)
+} else {
+	if (!images[imagePath]) throw new Error(`SmallImageButton: image not found: ${imagePath}`)
+}
+
+function scopeSvgIds(svg: string, suffix: string): string {
+	// Collect all IDs defined in this SVG
+	const ids = [...svg.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1])
+	let result = svg
+	for (const id of ids) {
+		const escaped = id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+		// Rename the definition
+		result = result.replace(new RegExp(`id="${escaped}"`, 'g'), `id="${id}-${suffix}"`)
+		// Rename all references (href="#id", url(#id), xlink:href="#id")
+		result = result.replace(new RegExp(`href="#${escaped}"`, 'g'), `href="#${id}-${suffix}"`)
+		result = result.replace(
+			new RegExp(`xlink:href="#${escaped}"`, 'g'),
+			`xlink:href="#${id}-${suffix}"`
+		)
+		result = result.replace(new RegExp(`url\\(#${escaped}\\)`, 'g'), `url(#${id}-${suffix})`)
+	}
+	return result
+}
+
+const uid = Math.random().toString(36).slice(2, 8)
+const svgContent = isSvg ? scopeSvgIds(await svgs[imagePath](), uid) : null
+---
+
+<a
+	href={href}
+	class='flex flex-col items-center w-28 gap-1 group text-inherit no-underline hover:opacity-80 transition-opacity duration-150 cursor-pointer'
+>
+	<div class='flex items-center justify-center h-20 w-full'>
+		{
+			isSvg ? (
+				<div
+					class={`max-h-20 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-150 [&>svg]:h-20 [&>svg]:w-auto ${className}`}
+					aria-label={alt}
+					set:html={svgContent}
+				/>
+			) : (
+				<Image
+					src={images[imagePath]()}
+					width={120}
+					height={120}
+					class={`max-h-20 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-150`}
+					alt={alt}
+				/>
+			)
+		}
+	</div>
+	<p class='text-sm text-center font-medium leading-tight mt-1'>{label}</p>
+	{badge && <p class='text-xs text-center font-semibold text-amber-500'>{badge}</p>}
+</a>

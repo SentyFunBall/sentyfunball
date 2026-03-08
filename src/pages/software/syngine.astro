@@ -1,0 +1,33 @@
+---
+import CustomImage from '@/components/CustomImage'
+import BaseLayout from '@/layouts/BaseLayout'
+
+const SITE_TITLE = 'Syngine'
+---
+
+<BaseLayout title={SITE_TITLE}>
+	<div>
+		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
+		<h3 class='text-2xl font-medium mt-4'>
+			A native and modern cross-platform game engine for open-world engineering games.
+		</h3>
+	</div>
+</BaseLayout>
+
+<script>
+	import { animate } from 'motion'
+	const showAnimations = localStorage.getItem('animations') === 'true'
+
+	if (showAnimations) {
+		animate(
+			'.title',
+			{ y: [80, 0], opacity: [0, 1] },
+			{
+				duration: 2.5,
+				opacity: { duration: 3 },
+
+				offset: [0, 0.55, 0.75]
+			}
+		)
+	}
+</script>

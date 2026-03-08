@@ -1,0 +1,60 @@
+---
+import TitlePage from '@/components/TitlePage'
+import CustomImage from '@/components/CustomImage'
+import BaseLayout from '@/layouts/BaseLayout'
+import { siteConfig } from '@/site-config'
+---
+
+<BaseLayout title='About'>
+	<TitlePage title={siteConfig.title} extra='About ' front={true} />
+	<CustomImage imagePath='/src/assets/images/heros/about_hero.jpg' altText='About Us' />
+	<div class='w-full'>
+		<div style='width: 50%; min-width:300px; margin: 0 auto;'>
+			<h2 class='text-2xl font-medium text-center mt-10'>
+				"At SentyTek, we believe that the greatest and most interesting experiences come when people
+				are given the freedom and the tools to experiment limitlessly."
+			</h2>
+			<h2 class='text-xl font-medium text-right mb-6'>- SentyTek CEO Senty Funball</h2>
+			<h2 class='text-2xl font-medium text-center mt-10 mb-6'>About SentyTek</h2>
+			<p class='text-center text-lg text-gray-700 dark:text-gray-300 px-4'>
+				SentyTek is a leading technology company and automaker, focused on creating simple and
+				effective products to empower the Creative minds. Founded in 1999, SentyTek has designed
+				hardware and software together to create best-in-class experiences to inspire people
+				globally. From Aita, our leading electric sedan, to Syngine, our advanced simulation
+				centered game engine, SentyTek is committed to creating innovative products that push the
+				boundaries of technology and design.
+			</p>
+			<br />
+			<h2 class='text-2xl font-medium text-center mt-10 mb-6'>History</h2>
+			<p class='text-center text-lg text-gray-700 dark:text-gray-300 px-4'>
+				SentyTek was founded in 1999 as a subsidiary of SFB Inc., with the goal of splitting the
+				company's growing technology products into a separate entity. By 2007 SentyTek had become
+				the most profitable division, with a range of software and hardware products designed for
+				consumers. In 2019 SentyTek was spun off an an independent company when SFB Inc. went
+				bankrupt. In 2020 due to growing internal conflict, SentyTek went private and underwent a
+				major corporate restructuring, with 2012-present CEO Senty Funball taking majority ownership
+				and a more active role in the company. Since then, SentyTek has continued to grow and expand
+				into new industries such as automotive and aerospace, while maintaining its focus on
+				creating innovative products that empower creative people.
+			</p>
+		</div>
+	</div>
+</BaseLayout>
+
+<script>
+	import { animate } from 'motion'
+	const showAnimations = localStorage.getItem('animations') === 'true'
+
+	if (showAnimations) {
+		animate(
+			'.title',
+			{ y: [80, 0], opacity: [0, 1] },
+			{
+				duration: 2.5,
+				opacity: { duration: 3 },
+
+				offset: [0, 0.55, 0.75]
+			}
+		)
+	}
+</script>

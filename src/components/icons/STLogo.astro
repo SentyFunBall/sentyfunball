@@ -1,0 +1,14 @@
+---
+import Logo from '../../assets/svg/stnewlogo_trans.svg'
+type Props = {
+	size?: number
+}
+---
+
+<a href='/'
+	><img
+		src={Logo.src}
+		alt='Shape Icon'
+		class={`w-${Astro.props.size ?? 16} h-${Astro.props.size ?? 16}`}
+	/></a
+>
