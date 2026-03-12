@@ -1,5 +1,8 @@
 ---
 import CustomImage from '@/components/CustomImage'
+import ImageCarousel from '@/components/ImageCarousel'
+import CardCarousel from '@/components/CardCarousel'
+import StickyHeader from '@/components/StickyHeader'
 import BaseLayout from '@/layouts/BaseLayout'
 
 const SITE_TITLE = 'SenCar 6'
@@ -8,7 +11,13 @@ const SITE_TITLE = 'SenCar 6'
 <BaseLayout title={SITE_TITLE}>
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
-		<h2 class='text-3xl font-medium mt-4'>Superpowered</h2>
+		<h2 class='text-3xl font-medium mt-4 mb-10'>Superpowered</h2>
+		<CustomImage
+			imagePath='/src/assets/blog/auto/sencar-6/hero.jpg'
+			altText='SenCar 6, the new superpowered car OS, in all its glory'
+		/>
+
+		<article class='prose-xl w-full max-w-none mt-8'></article>
 	</div>
 </BaseLayout>
 

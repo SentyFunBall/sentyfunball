@@ -20,7 +20,7 @@ const SITE_TITLE = 'Aita'
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
 		<h2 class='text-3xl font-medium mt-4 mb-10'>Power Player</h2>
 		<CustomImage
-			imagePath='/src/assets/blog/aita/aita-hero.jpg'
+			imagePath='/src/assets/blog/auto/aita-outnow/aita-hero.jpg'
 			altText='Aita, the new SentyTek car, in all its glory'
 		/>
 		<div class='flex justify-center mt-10'>
@@ -37,15 +37,21 @@ const SITE_TITLE = 'Aita'
 			<h2 class='text-4xl font-bold'>Get the highlights</h2>
 			<CardCarousel>
 				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
-					<p class='text-4xl mb-3'>🖥️</p>
+					<CustomImage
+						imagePath='/src/assets/blog/auto/aita-outnow/aita_all_dash.jpg'
+						altText='The different dashboard themes and layouts'
+					/>
 					<h4 class='text-xl font-bold mb-2'>4 Dashboard Layouts</h4>
 					<p class='text-gray-600 dark:text-gray-300'>
-						Choose from Minimal, Widget, Radio, and Central Display — each redesigned with EV-first
+						Choose from SenCar 6, SenCar 5, Modern, and Round — each designed with EV-first
 						iconography.
 					</p>
 				</div>
 				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
-					<p class='text-4xl mb-3'>🎨</p>
+					<CustomImage
+						imagePath='/src/assets/blog/auto/aita-outnow/aita_colors.jpg'
+						altText='Customizable color themes for the dashboard'
+					/>
 					<h4 class='text-xl font-bold mb-2'>7 Color Themes</h4>
 					<p class='text-gray-600 dark:text-gray-300'>
 						Pick your vibe. Seven themes with per-theme hue adjustments so your dash matches your
@@ -53,7 +59,10 @@ const SITE_TITLE = 'Aita'
 					</p>
 				</div>
 				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
-					<p class='text-4xl mb-3'>🛡️</p>
+					<CustomImage
+						imagePath='/src/assets/blog/auto/aita-outnow/aita_aeb.jpg'
+						altText='Automatic Emergency Braking in action, stopping the car before an impact.'
+					/>
 					<h4 class='text-xl font-bold mb-2'>Safety Suite</h4>
 					<p class='text-gray-600 dark:text-gray-300'>
 						Automatic Emergency Braking, dead man's switch, and radar-driven Autopilot keep you and
@@ -61,7 +70,10 @@ const SITE_TITLE = 'Aita'
 					</p>
 				</div>
 				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
-					<p class='text-4xl mb-3'>🔗</p>
+					<CustomImage
+						imagePath='/src/assets/blog/auto/aita-outnow/aita_senconnect.jpg'
+						altText='SenConnect 1.2 features'
+					/>
 					<h4 class='text-xl font-bold mb-2'>SenConnect 1.2</h4>
 					<p class='text-gray-600 dark:text-gray-300'>
 						Stay connected to other SentyTek vehicles in real time — perfect for convoys, caravans,
@@ -70,7 +82,7 @@ const SITE_TITLE = 'Aita'
 				</div>
 			</CardCarousel>
 
-			<p><strong>A brand new car, in a brand new era</strong></p>
+			<h2 class='text-4xl font-bold mt-10'>A brand new car, in a brand new era</h2>
 			<p>
 				Aita is SentyTek's first new vehicle platform in a while, and we wanted to redefine what a
 				SentyTek car is. Aita ushers in a new era of SentyTek, being our first ever true sedan and
@@ -80,7 +92,7 @@ const SITE_TITLE = 'Aita'
 			<h2>Exterior</h2>
 
 			<CustomImage
-				imagePath='/src/assets/blog/aita/exterior.jpg'
+				imagePath='/src/assets/blog/auto/aita-outnow/exterior.jpg'
 				altText='The exterior of the car or something'
 			/>
 
@@ -97,7 +109,7 @@ const SITE_TITLE = 'Aita'
 			<h2>Inside</h2>
 
 			<CustomImage
-				imagePath='/src/assets/blog/aita/interior-dashboard.jpg'
+				imagePath='/src/assets/blog/auto/aita-outnow/interior-dashboard.jpg'
 				altText='The interior of the car with the wonderful SenCar 6 dashboard'
 			/>
 
@@ -113,7 +125,7 @@ const SITE_TITLE = 'Aita'
 			<h2>Power</h2>
 
 			<CustomImage
-				imagePath='/src/assets/blog/aita/skateboard.jpg'
+				imagePath='/src/assets/blog/auto/aita-outnow/skateboard.jpg'
 				altText='The powertrain of the car, with four wheels, two drive units, and the microcontroller platform'
 			/>
 
@@ -136,13 +148,16 @@ const SITE_TITLE = 'Aita'
 
 			<ImageCarousel
 				images={[
-					{ path: '/src/assets/blog/aita/car6.jpg', alt: 'The SenCar 6 dashboard' },
+					{ path: '/src/assets/blog/auto/aita-outnow/car6.jpg', alt: 'The SenCar 6 dashboard' },
 					{
-						path: '/src/assets/blog/aita/interior-carapp.jpg',
+						path: '/src/assets/blog/auto/aita-outnow/interior-carapp.jpg',
 						alt: 'The Car app, with many options to customize your car'
 					},
-					{ path: '/src/assets/blog/aita/rear.jpg', alt: 'The rear view of the car' },
-					{ path: '/src/assets/blog/aita/tictac.jpg', alt: 'The rear seats with Tic-Tac-Toe game' }
+					{ path: '/src/assets/blog/auto/aita-outnow/rear.jpg', alt: 'The rear view of the car' },
+					{
+						path: '/src/assets/blog/auto/aita-outnow/tictac.jpg',
+						alt: 'The rear seats with Tic-Tac-Toe game'
+					}
 				]}
 			/>
 
@@ -175,7 +190,8 @@ const SITE_TITLE = 'Aita'
 
 			<p>
 				<a href='https://github.com/SentyFunBall/SW-SenCar'
-					>SenCar 6 Source Code &amp; Dev updates</a>
+					>SenCar 6 Source Code &amp; Dev updates</a
+				>
 			</p>
 
 			<h2 id='specs'>Specs</h2>

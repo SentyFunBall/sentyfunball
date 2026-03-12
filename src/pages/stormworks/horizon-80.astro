@@ -1,5 +1,8 @@
 ---
 import CustomImage from '@/components/CustomImage'
+import ImageCarousel from '@/components/ImageCarousel'
+import CardCarousel from '@/components/CardCarousel'
+import StickyHeader from '@/components/StickyHeader'
 import BaseLayout from '@/layouts/BaseLayout'
 
 const SITE_TITLE = 'Horizon 80'
@@ -8,7 +11,10 @@ const SITE_TITLE = 'Horizon 80'
 <BaseLayout title={SITE_TITLE}>
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
-		<h2 class='text-3xl font-medium mt-4'>Star of the Show</h2>
+		<h2 class='text-3xl font-medium mt-4 mb-10'>Star of the Show</h2>
+		<CustomImage imagePath='/src/assets/blog/auto/horizon-80/hero.jpg' altText='Star of the Show' />
+
+		<article class='prose-xl w-full max-w-none mt-8'></article>
 	</div>
 </BaseLayout>
 

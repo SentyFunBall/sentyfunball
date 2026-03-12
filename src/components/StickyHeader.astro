@@ -3,11 +3,19 @@ interface Props {
 	title: string
 	buyUrl: string
 	buyLabel?: string
+	buyExternal?: boolean
 	exploreUrl?: string
 	exploreLabel?: string
 }
 
-const { title, buyUrl, buyLabel = 'Buy', exploreUrl, exploreLabel = 'Explore' } = Astro.props
+const {
+	title,
+	buyUrl,
+	buyLabel = 'Buy',
+	buyExternal = true,
+	exploreUrl,
+	exploreLabel = 'Explore'
+} = Astro.props
 ---
 
 <div
@@ -33,7 +41,8 @@ const { title, buyUrl, buyLabel = 'Buy', exploreUrl, exploreLabel = 'Explore' } 
 			}
 			<a
 				href={buyUrl}
-				target='_blank'
+				target={buyExternal ? '_blank' : undefined}
+				rel={buyExternal ? 'noreferrer' : undefined}
 				class='px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
 			>
 				{buyLabel}

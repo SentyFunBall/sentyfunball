@@ -1,0 +1,39 @@
+---
+title: Shadows
+heroImage: ../../../assets/blog/syngine/08-shadows/hero.jpg
+description: Finally, we've added something realistic.
+category: Syngine
+pubDate: August 22, 2025
+tags: ['Syngine', 'Software', 'Bakerman']
+---
+
+# #8: Shadows
+
+_The following is adapted from a Discord post_
+
+Good morning Chag. As promised last week, we have shadows now! I'm sure many of you noticed over the last week my constant complaints about shadows not working, and frankly they were hard to implement. Fortunately with the amazing math help from Kernle, I was able to get shadows working "in no time at all!" Finally, something visually new after two months!
+Shadows in 3D games are generally either ray-traced, baked (WEED), or real-time with with shadow mapping. With the type of games we're aiming to make, real-time shadows are pretty much our only option. We would love ray traced shadows but not everyone has RT capable hardware (even if it's not full RT). Real time shadows are great, and most games these days use them, but they are fairly expensive. We've also implemented an LOD system (cascaded shadow maps) to help. This allows us to have fine details on nearby shadows, but much lower resolution details further away where it doesn't matter.
+
+![Depth map](../../../assets/blog/syngine/08-shadows/depth.jpg)
+A depth map. Darker colors = pixel is closer to the camera. Split into four views, with each view being more zoomed out than the last.
+
+Shadow mapping works by rendering the scene from the light's point of view. As a result, you get what's called a "depth" map, where each pixel is colored simply by how far it is from the light (see B&W image), where white is far and black is close. Then when rendering the scene for real, you can do some math to check how far each pixel is from the light, and if the pixel is further from the light than what the depth map shows, there is something in front of that pixel and it must be in shadow. To help smoothen shadows, we have Percentage Closer Filtering, which just blurs the edges a bit. We intend to add Contact-Hardening as well to make shadows softer the further from the light. We're still tuning the shadows, so please excuse oddities you see, mostly during day/night transitions.
+We continue to work on inputs, and are now beginning initial work on Lua implementation! Unfortunately, classes are about to begin again, so progress may slow down. That's all I have for now, tune back in next time. Bakerman out!
+
+## Videos
+
+<video width='640' height='480' controls>
+	<source src='/videos/syngine-08-shadows/1.mp4' type='video/mp4' />
+</video>
+Showing the day/night cycle with shadows.
+
+<video width='640' height='480' controls>
+	<source src='/videos/syngine-08-shadows/2.mp4' type='video/mp4' />
+</video>
+A walk around with shadows.
+
+<video width='640' height='480' controls>
+	<source src='/videos/syngine-08-shadows/3.mp4' type='video/mp4' />
+</video>
+Demonstrating the cascade selection, where darker colors use the more "zoomed in" cascades in the
+CSM.

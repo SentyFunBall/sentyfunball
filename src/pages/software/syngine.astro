@@ -1,5 +1,8 @@
 ---
 import CustomImage from '@/components/CustomImage'
+import ImageCarousel from '@/components/ImageCarousel'
+import CardCarousel from '@/components/CardCarousel'
+import StickyHeader from '@/components/StickyHeader'
 import BaseLayout from '@/layouts/BaseLayout'
 
 const SITE_TITLE = 'Syngine'
@@ -8,9 +11,15 @@ const SITE_TITLE = 'Syngine'
 <BaseLayout title={SITE_TITLE}>
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
-		<h3 class='text-2xl font-medium mt-4'>
-			A native and modern cross-platform game engine for open-world engineering games.
-		</h3>
+		<h2 class='text-3xl font-medium mt-4 mb-10'>
+			A modern, cross platform game engine for simulation driven games.
+		</h2>
+		<CustomImage
+			imagePath='/src/assets/blog/auto/syngine/hero.jpg'
+			altText='A modern, cross platform game engine for simulation driven games'
+		/>
+
+		<article class='prose-xl w-full max-w-none mt-8'></article>
 	</div>
 </BaseLayout>
 

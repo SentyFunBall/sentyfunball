@@ -1,5 +1,8 @@
 ---
 import CustomImage from '@/components/CustomImage'
+import ImageCarousel from '@/components/ImageCarousel'
+import CardCarousel from '@/components/CardCarousel'
+import StickyHeader from '@/components/StickyHeader'
 import BaseLayout from '@/layouts/BaseLayout'
 
 const SITE_TITLE = 'SenUI'
@@ -8,9 +11,13 @@ const SITE_TITLE = 'SenUI'
 <BaseLayout title={SITE_TITLE}>
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
-		<h3 class='text-2xl font-medium mt-4'>
-			A revolutionary user interface library for Stormworks Lua
-		</h3>
+		<h2 class='text-3xl font-medium mt-4 mb-10'>A Revolutionary new UI framework for Stormworks</h2>
+		<CustomImage
+			imagePath='/src/assets/blog/auto/senui/hero.jpg'
+			altText='A revolutionary new UI framework for Stormworks'
+		/>
+
+		<article class='prose-xl w-full max-w-none mt-8'></article>
 	</div>
 </BaseLayout>
 

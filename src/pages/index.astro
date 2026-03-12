@@ -1,21 +1,24 @@
 ---
 import HomeCard from '@/components/HomeCard'
 import TitlePage from '@/components/TitlePage'
-import FormattedDate from '@/components/FormattedDate'
 import BaseLayout from '@/layouts/BaseLayout'
-import { getPosts } from '@/utils'
 import { siteConfig } from '@/site-config'
-
-const MAX_POSTS = 5 // max number of posts to show on the home page
-const posts = await getPosts(MAX_POSTS)
 ---
 
 <BaseLayout title='Home'>
-	<TitlePage title={siteConfig.title} extra='' />
-
 	<div>
-		<HomeCard id={posts[0].id} data={posts[0].data} slug={posts[0].slug} />
-		<HomeCard id={posts[1].id} data={posts[1].data} slug={posts[1].slug} />
+		<HomeCard
+			title='SentyTek Aita'
+			description='A brand new car, in a brand new era.'
+			heroVideo='/src/assets/video/aita-hero-loop.mp4'
+			slug='stormworks/aita'
+		/>
+		<HomeCard
+			title='Syngine: XML and Chill'
+			description='Syngine has gained new XML features.'
+			heroImage='/src/assets/images/syngine.jpg'
+			slug='post/syngine/10-xml'
+		/>
 	</div>
 </BaseLayout>
 

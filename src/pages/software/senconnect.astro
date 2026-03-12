@@ -1,5 +1,8 @@
 ---
 import CustomImage from '@/components/CustomImage'
+import ImageCarousel from '@/components/ImageCarousel'
+import CardCarousel from '@/components/CardCarousel'
+import StickyHeader from '@/components/StickyHeader'
 import BaseLayout from '@/layouts/BaseLayout'
 
 const SITE_TITLE = 'SenConnect'
@@ -8,7 +11,13 @@ const SITE_TITLE = 'SenConnect'
 <BaseLayout title={SITE_TITLE}>
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
-		<h3 class='text-2xl font-medium mt-4'>A connectivity solution for Stormworks.</h3>
+		<h2 class='text-3xl font-medium mt-4 mb-10'>Connected. Always. Do not worry.</h2>
+		<CustomImage
+			imagePath='/src/assets/blog/auto/senconnect/hero.jpg'
+			altText='SenConnect, the old SentyTek connectivity solution.'
+		/>
+
+		<article class='prose-xl w-full max-w-none mt-8'></article>
 	</div>
 </BaseLayout>
 

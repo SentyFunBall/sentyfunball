@@ -1,5 +1,8 @@
 ---
 import CustomImage from '@/components/CustomImage'
+import ImageCarousel from '@/components/ImageCarousel'
+import CardCarousel from '@/components/CardCarousel'
+import StickyHeader from '@/components/StickyHeader'
 import BaseLayout from '@/layouts/BaseLayout'
 
 const SITE_TITLE = 'SentyTek Theater'
@@ -8,7 +11,13 @@ const SITE_TITLE = 'SentyTek Theater'
 <BaseLayout title={SITE_TITLE}>
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
-		<h2 class='text-3xl font-medium mt-4'>The SentyTek Theater Experience</h2>
+		<h2 class='text-3xl font-medium mt-4 mb-10'>Experiencing SentyTek, Live on Stage</h2>
+		<CustomImage
+			imagePath='/src/assets/blog/auto/theater/hero.jpg'
+			altText='The SentyTek Theater, a grand stage with a large screen showing a SentyTek vehicle in action, surrounded by an enthusiastic audience.'
+		/>
+
+		<article class='prose-xl w-full max-w-none mt-8'></article>
 	</div>
 </BaseLayout>
 
