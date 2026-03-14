@@ -14,6 +14,14 @@ module.exports = {
 			},
 			gridTemplateColumns: {
 				list: 'repeat(auto-fill, minmax(400px, max-content))'
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						'ul > li::marker': { color: '#9ca3af' },
+						'ol > li::marker': { color: '#9ca3af' }
+					}
+				}
 			}
 		}
 	},

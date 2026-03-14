@@ -1,0 +1,211 @@
+---
+import CustomImage from '@/components/CustomImage'
+import ImageCarousel from '@/components/ImageCarousel'
+import CardCarousel from '@/components/CardCarousel'
+import StickyHeader from '@/components/StickyHeader'
+import BaseLayout from '@/layouts/BaseLayout'
+
+const SITE_TITLE = 'SWRT 11'
+---
+
+<BaseLayout title={SITE_TITLE}>
+	<div>
+		<section
+			class='relative w-screen h-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden'
+		>
+			<video autoplay loop muted playsinline class='absolute inset-0 h-auto w-full object-cover'>
+				<source src='/videos/swrt/couch-launch.mp4' type='video/mp4' />
+				Your browser does not support the video tag.
+			</video>
+			<div class='absolute inset-0 bg-black/40'></div>
+			<div
+				class='relative z-10 flex h-full flex-col items-center justify-start pt-[10vh] px-5 text-center text-white'
+			>
+				<h1 class='title text-5xl sm:text-6xl lg:text-7xl font-bold'>{SITE_TITLE}</h1>
+				<h2 class='text-md sm:text-sm lg:text-xl font-medium mt-4'>
+					A SUBORBITAL CLASS PARTIALLY REUSABLE ROCKET
+				</h2>
+			</div>
+		</section>
+
+		<article class='prose prose-xl dark:prose-invert w-full max-w-none mt-8'>
+			<h2 class='text-4xl font-bold'>Overview</h2>
+			<p>
+				The StormWorks Rocket Test 11, (SWRT 11), is the eleventh iteration of our suborbital class
+				rocket, designed for testing and research in the upper atmosphere and near space. It
+				features a powerful engine, advanced avionics, and a robust design to withstand the harsh
+				conditions of high-altitude flight. SWRT 11 is partially reusable (The booster can be
+				reflown), with a focus on rapid turnaround and cost-effective testing for a variety of
+				payloads and experiments.
+			</p>
+			<CustomImage
+				imagePath='/src/assets/images/stormworks/swrt/image-3.jpg'
+				altText='SWRT 11 having a "launch" with an Atlas locomotive as the "payload".'
+			/>
+			<p>
+				Almost anything can be launched by SWRT 11 so long as it fits within the mass limits. We've
+				gone as far as launching entire locomotives on top of the stack, with less than ideal
+				results. Honda Civics, Kei trucks, couches, and nuclear reactors have all been launched by
+				SWRT with great success, and we're always excited to launch new and exciting payloads on our
+				world class vehicle.
+			</p>
+			<CardCarousel>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<h2 class='text-2xl font-bold mb-4'>Key Specifications</h2>
+					<CustomImage imagePath='/src/assets/images/stormworks/swrt/launch.jpg' altText='' />
+					<table>
+						<tr>
+							<th class='text-left'>Height</th>
+							<td>32 meters</td>
+						</tr>
+						<tr>
+							<th class='text-left'>Diameter</th>
+							<td>3.75 meters</td>
+						</tr>
+						<tr>
+							<th class='text-left'>Mass</th>
+							<td>6,000 mass (Dry)</td>
+						</tr>
+						<tr>
+							<th class='text-left'>Payload Capacity</th>
+							<td>~15,000 mass to suborbit</td>
+						</tr>
+						<tr>
+							<th class='text-left'>Engine Type</th>
+							<td>Liquid-fueled Khasenty air-breathing jet engine w/ electric assist.</td>
+						</tr>
+					</table>
+				</div>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<h2 class='text-2xl font-bold mb-4'>First Stage</h2>
+					<CustomImage
+						imagePath='/src/assets/images/stormworks/swrt/land-wide.jpg'
+						altText="SWRT 11's first stage, the booster, landing back on the ground after a successful launch."
+					/>
+					<p class='text-gray-600 dark:text-gray-300'>
+						SWRT 11's first stage is a powerful and immense booster designed for heavy lift and
+						rapid reusability. It incorporates a single Khasenty 3 engine with electric assist
+						giving a 0.2 second startup time, allowing SWRT to lift heavy payloads to suborbit with
+						ease. The booster is designed for rapid turnaround with innovative landing legs and
+						robust landing electronics, allowing it to return to the launch site for refurbishment
+						and reuse in future missions.
+					</p>
+				</div>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<h2 class='text-2xl font-bold mb-4'>Second Stage</h2>
+					<CustomImage
+						imagePath='/src/assets/images/stormworks/swrt/stage-two.jpg'
+						altText="SWRT 11's second stage immediately following stage separation."
+					/>
+					<p class='text-gray-600 dark:text-gray-300'>
+						The second stage of SWRT 11 is a compact and efficient upper stage designed for
+						precision orbital insertion and payload deployment. It features a solid fuel engine
+						optimized for performance, with a simple and reliable design to ensure mission success.
+						The second stage is equipped with advanced avionics and guidance systems for accurate
+						trajectory control, making it ideal for a wide range of suborbital missions and
+						experiments.
+					</p>
+				</div>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<h2 class='text-2xl font-bold mb-4'>Payload Fairing</h2>
+					<CustomImage
+						imagePath='/src/assets/images/stormworks/swrt/fairings.jpg'
+						altText="SWRT 11's payload fairing, shown here during flight."
+					/>
+					<p class='text-gray-600 dark:text-gray-300'>
+						SWRT 11's payload fairing is a sleek and aerodynamic enclosure designed to protect the
+						payload during ascent and ensure a safe and successful deployment. It features a
+						lightweight yet durable construction, with a streamlined shape to minimize drag and
+						maximize performance. The fairing is equipped with advanced separation mechanisms for
+						reliable payload release, making it suitable for a wide range of scientific instruments,
+						technology demonstrations, and other suborbital experiments. After a mission, it
+						parachutes back to the ground for recovery and reuse in future launches.
+					</p>
+					<table>
+						<tr>
+							<th class='text-left'>Diameter</th>
+							<td>3.25 meters</td>
+						</tr>
+						<tr>
+							<th class='text-left'>Height</th>
+							<td>5.75 meters</td>
+						</tr>
+					</table>
+				</div>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<h2 class='text-2xl font-bold mb-4'>Video: Tower catch</h2>
+					<video controls muted class='w-full aspect-video rounded-3xl'>
+						<source src='/videos/swrt/tower-catch.mp4' type='video/mp4' />
+						Your browser does not support the video tag.
+					</video>
+					<p>
+						SWRT 11 has even been caught by a Starship style launch tower, just like SpaceX's own
+						Superheavy boosters.
+					</p>
+				</div>
+			</CardCarousel>
+			<iframe
+				class='w-full aspect-video rounded-3xl'
+				src='https://www.youtube.com/watch?v=zXbHP7V7J_o'
+				title='SWRT 11 Launch Video'
+				allowfullscreen></iframe>
+			<p class='text-gray-600 dark:text-gray-300 text-sm mt-2 mb-10'>
+				Video: SWRT 11 in action. <a
+					class='text-blue-500 hover:underline'
+					href='https://www.youtube.com/watch?v=zXbHP7V7J_o'
+					target='_blank'
+					rel='noopener noreferrer'>Watch on YouTube</a>
+			</p>
+			<ImageCarousel
+				images={[
+					{
+						path: '/src/assets/images/stormworks/swrt/hero.jpg',
+						alt: 'SWRT 11 just after lift off, with the launch pad support structures pulling away and the rocket engulfed in flames and smoke.'
+					},
+					{
+						path: '/src/assets/images/stormworks/swrt/tower.jpg',
+						alt: 'SWRT 11 booster being caught by a Starship launch tower.'
+					},
+					{
+						path: '/src/assets/images/stormworks/swrt/stage-sep.jpg',
+						alt: 'SWRT 11 stage separation with the booster and upper stage drifting apart from an interior camera view.'
+					},
+					{
+						path: '/src/assets/images/stormworks/swrt/stage-sep-ext.jpg',
+						alt: 'External cinematic view of SWRT 11 during stage separation in flight.'
+					},
+					{
+						path: '/src/assets/images/stormworks/swrt/first-land.jpg',
+						alt: 'The first ever landing of an SWRT booster in 2021 by SWRT 8, marking a major milestone in the development of the SWRT program.'
+					},
+					{
+						path: '/src/assets/images/stormworks/swrt/land-close.jpg',
+						alt: 'Close-up of the SWRT 11 booster moments before touchdown.'
+					},
+					{
+						path: '/src/assets/images/stormworks/swrt/land-train.jpg',
+						alt: 'SWRT 11 booster landing on a rail car designed to catch the booster and bring it back to the launch site for refurbishment and reuse.'
+					}
+				]}
+			/>
+		</article>
+	</div>
+</BaseLayout>
+
+<script>
+	import { animate } from 'motion'
+	const showAnimations = localStorage.getItem('animations') === 'true'
+
+	if (showAnimations) {
+		animate(
+			'.title',
+			{ y: [80, 0], opacity: [0, 1] },
+			{
+				duration: 2.5,
+				opacity: { duration: 3 },
+
+				offset: [0, 0.55, 0.75]
+			}
+		)
+	}
+</script>

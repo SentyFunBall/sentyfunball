@@ -13,11 +13,89 @@ const SITE_TITLE = 'Accessories'
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
 		<h2 class='text-3xl font-medium mt-4 mb-10'>Enhance Your SentyTek Vehicle Experience</h2>
 		<CustomImage
-			imagePath='/src/assets/blog/auto/accessories/hero.jpg'
-			altText='Enhance Your SentyTek Vehicle Experience with our range of accessories'
+			imagePath='/src/assets/images/stormworks/accessories/hero.jpg'
+			altText='Enhance Your SentyTek Vehicle Experience with our range of accessories, like this fifth-wheel adapter for the Echolodia.'
 		/>
 
-		<article class='prose-xl w-full max-w-none mt-8'></article>
+		<article class='prose prose-xl dark:prose-invert w-full max-w-none mt-8'>
+			<h1 class='text-4xl font-bold'>Upgrade Your Ride with SentyTek Accessories</h1>
+			<CardCarousel>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<ImageCarousel
+						images={[
+							{
+								path: '/src/assets/images/stormworks/accessories/fifth-wheel1.jpg',
+								alt: 'Echolodia Fifth-Wheel Adapter on the bed of Echolodia 2023. '
+							},
+							{
+								path: '/src/assets/images/stormworks/accessories/fifth-wheel3.jpg',
+								alt: 'Echolodia Fifth-Wheel Adapter connected to the back of the truck.'
+							},
+							{
+								path: '/src/assets/images/stormworks/accessories/fifth-wheel2.jpg',
+								alt: 'Echolodia Fifth-Wheel Adapter close up.'
+							},
+							{
+								path: '/src/assets/images/stormworks/accessories/fifth-wheel4.jpg',
+								alt: 'Echolodia Fifth-Wheel Adapter with trailer attached.'
+							}
+						]}
+					/>
+
+					<h4 class='text-xl font-bold mb-2'>Echolodia Fifth-Wheel Adapter</h4>
+					<p class='text-gray-600 dark:text-gray-300'>
+						Tow trailers with ease using the Echolodia Fifth-Wheel Adapter. This essential accessory
+						allows you to connect a wide range of trailers to your Echolodia, expanding your hauling
+						capabilities and making it easier than ever to transport goods, vehicles, and more
+						across Stormworks.
+					</p>
+					<div class='flex justify-center mt-10'>
+						<div
+							class='w-fit px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+						>
+							<a
+								href='https://steamcommunity.com/sharedfiles/filedetails/?id=2992774914'
+								target='_blank'>Subscribe on the Workshop</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+					<ImageCarousel
+						images={[
+							{
+								path: '/src/assets/images/stormworks/accessories/camper-1.jpg',
+								alt: 'SenKei Camper Shell exterior view'
+							},
+							{
+								path: '/src/assets/images/stormworks/accessories/camper-2.jpg',
+								alt: 'SenKei Camper Shell setup for camping'
+							},
+							{
+								path: '/src/assets/images/stormworks/accessories/camper-3.jpg',
+								alt: 'SenKei Camper Shell interior view'
+							}
+						]}
+					/>
+					<h4 class='text-xl font-bold mb-2'>SenKei Camper Shell</h4>
+					<p class='text-gray-600 dark:text-gray-300'>
+						This camper shell extends SenKei's abilities by giving a nice comfy place to stay during
+						long trips with SenKei. It's lightweight, and with a bed, plenty of equipment, and a
+						two-step shell, it's more than capable for camping.
+					</p>
+					<div class='flex justify-center mt-10'>
+						<div
+							class='w-fit px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+						>
+							<a
+								href='https://steamcommunity.com/sharedfiles/filedetails/?id=3403609294'
+								target='_blank'>Subscribe on the Workshop</a
+							>
+						</div>
+					</div>
+				</div>
+			</CardCarousel>
+		</article>
 	</div>
 </BaseLayout>
 

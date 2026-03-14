@@ -9,12 +9,120 @@ const SITE_TITLE = 'SenKei'
 ---
 
 <BaseLayout title={SITE_TITLE}>
+	<StickyHeader
+		title='SenKei'
+		buyUrl='https://steamcommunity.com/sharedfiles/filedetails/?id=3403608936'
+		buyLabel='Subscribe on the Workshop'
+		exploreLabel='Tech Specs'
+		exploreUrl='#specs'
+	/>
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
 		<h2 class='text-3xl font-medium mt-4 mb-10'>Fantastically Mini</h2>
-		<CustomImage imagePath='/src/assets/blog/auto/senkei/hero.jpg' altText='Fantastically Mini' />
+		<CustomImage
+			imagePath='/src/assets/images/stormworks/senkei/hero.jpg'
+			altText='Fantastically Mini'
+		/>
+		<div class='flex justify-center mt-10'>
+			<div
+				class='w-fit px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+			>
+				<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=3403608936' target='_blank'
+					>Download Diesel</a
+				>
+			</div>
+			<div
+				class='w-fit px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+			>
+				<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=3403609112' target='_blank'
+					>Download EV</a
+				>
+			</div>
+		</div>
 
-		<article class='prose-xl w-full max-w-none mt-8'></article>
+		<article class='prose prose-xl dark:prose-invert w-full max-w-none mt-8'>
+			<h2>SenKei</h2>
+			<p>
+				After a whopping 6 day wait, SenKei has finally been released to the public. Kei trucks are
+				the latest trend in the automotive world of Stormworks, and SentyTek is here as well. SenKei
+				is SentyTek's first introduction into the market of mini trucks, and it's a fantastic one.
+			</p>
+			<CustomImage
+				imagePath='/src/assets/images/stormworks/senkei/side.jpg'
+				altText="SenKei, SentyTek's first introduction into the market of mini trucks, with a sleek and modern design"
+			/>
+			<hr />
+
+			<h2>Exterior</h2>
+			<p>
+				SenKei is a simple truck, but it's packed with features. On the front, a modern lightbar for
+				daytime illumination, and dimmed high beams for the night. The singular door is operated
+				with the new handle nodes, eliminating the large button. A rotating work light on top of
+				SenKei alerts people nearby of any work you're doing.
+			</p>
+			<CustomImage
+				imagePath='/src/assets/images/stormworks/senkei/rear.jpg'
+				altText='The rear of SenKei, featuring a winch, equipment, and a radiator to burn yourself on'
+			/>
+			<p>
+				In the bed of SenKei is a winch to pull things into it and four rope anchors to secure cargo
+				to the bed of SenKei. SenKei has plenty of equipment as well, with several first aid kits
+				and welding torches. A SiBTaT compatible flat tow hitch on SenKei gives the truck a towing
+				capacity of nearly double its weight. Hardpoints on the cabin back wall also allow you to
+				attach accessories to the back of SenKei.
+			</p>
+
+			<h2>Interior</h2>
+			<p>
+				SenKei runs SenCar 5, our revolutionary car operating system. A brand new version of our
+				ECU, RECO 3, is more capable than ever, giving SenKei incredible fuel efficiency and heat
+				management. It even has a radio.
+			</p>
+
+			<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center'>
+				<CustomImage
+					imagePath='/src/assets/images/stormworks/senkei/camper.jpg'
+					altText='SenKei Camper Shell'
+				/>
+				<h4 class='text-xl font-bold mb-2'>Camp, all day and all night.</h4>
+				<p class='text-gray-600 dark:text-gray-300'>
+					The SenKei Camper Shell enhances your SenKei experience by giving a nice comfy place to
+					stay during long trips with SenKei. It is lightweight, and with a bed, plenty of
+					equipment, and a two-step shell, it is more than capable for camping.
+				</p>
+				<a
+					href='/stormworks/accessories'
+					class='inline-block mt-4 px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white font-medium rounded-full transition-colors'
+					>Learn More</a
+				>
+			</div>
+
+			<hr />
+
+			<h2 id='specs'>Specs</h2>
+			<ul>
+				<li>Length: 3.75m (15 blocks)</li>
+				<li>Width: 1.75m (7 blocks)</li>
+				<li>Weight: 509 mass</li>
+				<li>Fuel capacity (Diesel): 62.5L (2x Small Fluid Tank)</li>
+				<li>Seating capacity: 2</li>
+				<li>Engine (Diesel): 3 cylinder 1x1 modular engine with MotorBoost technology</li>
+				<li>Engine (EV): 2x Small electric motors with V1 Regenerative Braking</li>
+				<li>
+					Transmission (Diesel): 3 speed automatic (or sequential) with individual FWD and AWD modes
+				</li>
+				<li>Transmission (EV): 1 speed + R transmission with RWD and AWD modes.</li>
+				<li>Top speed: 89mph (145kmh)</li>
+				<li>
+					Software: SenCar 5 Lite (Modified) with RECO 3 ECU (Diesel) or Drive Computer v1 (EV)
+				</li>
+			</ul>
+
+			<CustomImage
+				imagePath='/src/assets/images/stormworks/senkei/cool.jpg'
+				altText='SenKei is like really cool yo'
+			/>
+		</article>
 	</div>
 </BaseLayout>
 

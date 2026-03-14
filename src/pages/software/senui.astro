@@ -12,12 +12,41 @@ const SITE_TITLE = 'SenUI'
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
 		<h2 class='text-3xl font-medium mt-4 mb-10'>A Revolutionary new UI framework for Stormworks</h2>
-		<CustomImage
-			imagePath='/src/assets/blog/auto/senui/hero.jpg'
-			altText='A revolutionary new UI framework for Stormworks'
-		/>
-
-		<article class='prose-xl w-full max-w-none mt-8'></article>
+		<video width='100%' height='auto' autoplay muted loop>
+			<source src='/videos/senui/1.mp4' type='video/mp4' />
+			Your browser does not support the video tag.
+		</video>
+		<p class='text-center text-sm text-gray-500 dark:text-gray-400 mb-10 mt-5'>
+			SenUI Demo, with several lights and a sliding gradient.
+		</p>
+		<article class='prose prose-xl dark:prose-invert w-full max-w-none mt-8'>
+			<div class='flex justify-center mt-10'>
+				<div
+					class='w-fit px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+				>
+					<a href='https://github.com/SentyFunBall/senui' target='_blank'>View on GitHub</a>
+				</div>
+			</div>
+			<h2 class='text-4xl font-bold'>A New Era of User Interfaces</h2>
+			<p>
+				SenUI is a lightweight, simple and easy to use object-oriented (If you don't know what that
+				means, don't worry about it) UI library and framework designed to make creating
+				sophisticated and interactive displays with complex elements significantly easier in
+				Stormworks Lua. Instead of having to manually draw every screen component with <code
+					><span style='color:rgb(255, 216, 110);'>screen.</span><span
+						style='color:rgb(100, 211, 245);'>draw*</span
+					></code
+				>, SenUI makes this incredibly easy with just a handful of lines of object-oriented code.
+				SenUI empowers you to create clean, responsive, and consistent UIs while keeping your code
+				readable and small.
+			</p>
+			<p>
+				SenUI features several impressive UI elements at first, Push buttons, Toggle switches, and
+				Dropdown menus, with Sliders, Checkboxes, Progress bars, Animations, and more planned. SenUI
+				is powerful and efficient, drawing as few shapes to the screen as possible to maintain
+				incredibly high performance with complex displays.
+			</p>
+		</article>
 	</div>
 </BaseLayout>
 

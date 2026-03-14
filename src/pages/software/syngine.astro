@@ -15,11 +15,94 @@ const SITE_TITLE = 'Syngine'
 			A modern, cross platform game engine for simulation driven games.
 		</h2>
 		<CustomImage
-			imagePath='/src/assets/blog/auto/syngine/hero.jpg'
-			altText='A modern, cross platform game engine for simulation driven games'
+			imagePath='/src/assets/images/syngine.jpg'
+			altText='Syngine test scene with a ground, a cube, sphere, and a mug.'
 		/>
 
-		<article class='prose-xl w-full max-w-none mt-8'></article>
+		<article class='prose prose-xl dark:prose-invert w-full max-w-none mt-8'>
+			<p>
+				Syngine is a high-performance, cross-platform, modular, and modern C++ game engine built
+				from the ground up for open-world and simulation-heavy physics based games. It focuses on
+				flexibility, extensibility, developer control, and an incredibly powerful Lua modding API,
+				with support for real-time detailed physics, procedural terrain generation, and more.
+			</p>
+			<div class='flex justify-center mt-10'>
+				<div
+					class='w-fit px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+				>
+					<a href='/category/syngine/1' target='_blank'>See Newsroom posts</a>
+				</div>
+			</div>
+			<h2 class='text-3xl font-bold mt-16'>Features</h2>
+			<ul>
+				<li>Modular Architecture - Hot-swappable systems and a lightweight easy to use core</li>
+				<li>
+					Input & Windowing - SDL3-based windowing with a custom input manager with keyboard & mouse
+					and gamepad support
+				</li>
+				<li>
+					Rendering - Powered by bgfx for cross-platform games. Supports Vulkan, Direct3D 12 and
+					Metal with user-moddable shaders and easy and powerful renderer management
+				</li>
+				<li>
+					Physics - Jolt Physics for a fast and accurate collision system with high quality dynamics
+					and constraints.
+				</li>
+				<li>
+					Scripting & Modding - Integrated Lua & XML scripting for moddable gameplay logic and
+					assets
+				</li>
+				<li>
+					Asset Pipeline - Assimp + SPK, our custom binary bundle format with multithreaded LZ4
+					compression for speedy load times
+				</li>
+				<li>
+					Entity-Component-System - Custom entities allows for easy creation, modularity and
+					management of all game objects
+				</li>
+				<li>
+					Advanced tooling - XML based asset pipeline, in-engine level editor, hot-reloading
+					support, and more.
+				</li>
+			</ul>
+			<h2 class='text-3xl font-bold mt-16'>Roadmap</h2>
+			<ul>
+				<li>
+					Phase one: Core systems with Rendering, Physics, and Input subsystems. Completed Q4 25
+				</li>
+				<li>
+					Phase two: Engine infrastructure and editing tools (Multithreading, job system, level
+					editor, packages). In progress.
+				</li>
+				<li>
+					Phase three: Simulation & Advanced rendering (Compute support, deferred rendering, audio
+					subsystem, volumetrics, post processing)
+				</li>
+				<li>Phase four: Modding, Multiplayer, UI systems</li>
+				<li>Phase five: More advanced asset management, animations, water, advanced tech</li>
+			</ul>
+			<ImageCarousel
+				images={[
+					{
+						path: '/src/assets/images/software/syngine/1.jpg',
+						alt: 'Syngine with Cubes and spheres.'
+					},
+					{ path: '/src/assets/images/software/syngine/2.jpg', alt: 'Default sunrise in Syngine.' },
+					{
+						path: '/src/assets/images/software/syngine/3.jpg',
+						alt: 'An example of procedually rendered cubes and billboards with textures.'
+					},
+					{
+						path: '/src/assets/images/software/syngine/4.jpg',
+						alt: 'An example of physics wireframes.'
+					},
+					{
+						path: '/src/assets/images/software/syngine/5.jpg',
+						alt: 'An example of axis-aligned bounding boxes (AABB), used for culling GameObjects.'
+					}
+				]}
+			/>
+		</article>
 	</div>
 </BaseLayout>
 

@@ -9,12 +9,177 @@ const SITE_TITLE = 'Horizon 80'
 ---
 
 <BaseLayout title={SITE_TITLE}>
+	<StickyHeader
+		title='Horizon 80'
+		buyUrl='https://steamcommunity.com/sharedfiles/filedetails/?id=3299395184'
+		buyLabel='Subscribe on the Workshop'
+		exploreLabel='Pride Edition'
+		exploreUrl='#pride'
+	/>
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
 		<h2 class='text-3xl font-medium mt-4 mb-10'>Star of the Show</h2>
-		<CustomImage imagePath='/src/assets/blog/auto/horizon-80/hero.jpg' altText='Star of the Show' />
+		<CustomImage
+			imagePath='/src/assets/images/stormworks/horizon-80/hero.jpg'
+			altText='Star of the Show'
+		/>
+		<div class='flex justify-center mt-10'>
+			<div
+				class='w-fit px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+			>
+				<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=3299395184' target='_blank'
+					>Subscribe on the Workshop</a
+				>
+			</div>
+		</div>
 
-		<article class='prose-xl w-full max-w-none mt-8'></article>
+		<article class='prose prose-xl dark:prose-invert w-full max-w-none mt-8'>
+			<h2>Horizon 80 - Luxury Travel Trailer</h2>
+			<hr />
+			<p>
+				SentyTek is finally expanding into an amazing sector of vehicle in Stormworks - Campers.
+				Stormworkers love to go camping, and the Horizon is our answer to that call. Horizon is our
+				lineup of travel trailers, starting with the Horizon 80. It's the best travel trailer camper
+				in Stormworks, with enough ease of use and features to bring light to any camping trip.
+			</p>
+			<CustomImage
+				imagePath='/src/assets/images/stormworks/horizon-80/sunset.jpg'
+				altText='The Horizon 80, the best travel trailer camper in Stormworks, with a sleek and modern design'
+			/>
+			<hr />
+			<h2>Specs</h2>
+			<ul>
+				<li>Length: 9.0m bumper-to-bumper, 7.0m usable space</li>
+				<li>Width: 3.0m Travel mode, 6.25m Camping mode</li>
+				<li>Slides: 1</li>
+				<li>Sleeping capacity: 4 pax</li>
+				<li>Seating capacity: 5 pax</li>
+				<li>Weight: 3020 dry, 3040 wet</li>
+				<li>Fresh water: 205L</li>
+			</ul>
+			<hr />
+			<h2>Layout</h2>
+			<div class='inline-flex'>
+				<p><strong>Camping mode:</strong></p>
+				<img
+					width='50%'
+					src='https://i.imgur.com/64Fp2Bw.png'
+					alt='Horizon 80 layout in camping mode'
+					loading='lazy'
+				/>
+				<p><strong>Travel mode:</strong></p>
+				<img
+					width='50%'
+					src='https://i.imgur.com/9A5gplj.png'
+					alt='Horizon 80 layout in travel mode'
+					loading='lazy'
+				/>
+			</div>
+			<hr />
+			<h2>Exterior</h2>
+			<p>
+				Horizon 80 is a full featured travel trailer. With a SiBTaT-compatible connector, Horizon 80
+				can connect to any compatible vehicle and function perfectly. A small storage area near the
+				lockable, dual-pole door lets campers store essential suitcases, extra welding torches, or
+				anything else needed. A small grill and repair cabinet hosts essential equipment like
+				first-aid kits for use in a pinch. An awning extends out, providing shade for sunny days. A
+				connector on the back lets Horizon connect to the base plate on select vehicles, or tow
+				other vehicles itself, creating a toy hauler from a single camper.
+			</p>
+			<CustomImage
+				imagePath='/src/assets/images/stormworks/horizon-80/ext.jpg'
+				altText='The rear of the Horizon 80, showing the grill and repair cabinet, and the tow connector'
+			/>
+			<p>
+				A small service port connects the water tanks and electrical connection to a campgrounds
+				connectors, to help recharge and refuel the camper. An advanced, first-of-its-kind leveling
+				system with 4 jacks is incredibly versatile, allowing campers to level Horizon 80 on almost
+				any surface, creating a much more comfortable camping experience. Horizon 80 is also
+				SenConnect compatible, letting other SenConnect users see where the camper is, and with
+				Private Networks, it's possible to isolate a campsite, and only let other campers know where
+				Horizon is.
+			</p>
+			<hr />
+			<h2>Interior</h2>
+			<p>
+				Horizon's interior is filled with features to make camping a fun experience. The large
+				dinette slideout gives a ton of room inside the camper for activities. Every light in
+				Horizon 80 is an RGB light, easier on the eyes with smooth fades and rave modes. A small
+				kitchen is only for decoration*, including the Solid Rocket Booster in the fridge. A
+				flip-down TV has up to 20km of range, and a radio with up to 24km of range. The TV also has
+				a cable connection with composite pass through, to connect your favorite games and TV shows
+				on cable.
+			</p>
+			<p>
+				A fireplace**, a pair of 110v heaters, a functional seat, 3 openable windows, two separate
+				TVs and radios, Horizon 80 is the perfect camper for any situation. Download today.
+			</p>
+			<ImageCarousel
+				images={[
+					{
+						path: '/src/assets/images/stormworks/horizon-80/int.jpg',
+						alt: 'The interior of the Horizon 80, showing the dinette slideout and the kitchen area'
+					},
+					{
+						path: '/src/assets/images/stormworks/horizon-80/kitchen.jpg',
+						alt: 'The kitchen area of the Horizon 80, showing the appliances and storage options'
+					},
+					{
+						path: '/src/assets/images/stormworks/horizon-80/living.jpg',
+						alt: 'The living area of the Horizon 80, showing the seating and entertainment options'
+					},
+					{
+						path: '/src/assets/images/stormworks/horizon-80/bed.jpg',
+						alt: 'The sleeping area of the Horizon 80, showing the bed and storage options'
+					}
+				]}
+			/>
+			<CardCarousel>
+				<div class='rounded-3xl bg-gray-300 dark:bg-gray-800 p-8 text-center' id='pride'>
+					<ImageCarousel
+						images={[
+							{
+								path: '/src/assets/images/stormworks/horizon-80/pride-1.jpg',
+								alt: 'Pride Edition hooked up to a RV hookup at a campsite'
+							},
+							{
+								path: '/src/assets/images/stormworks/horizon-80/pride-2.jpg',
+								alt: 'Pride Edition at a campsite, fishing'
+							},
+							{
+								path: '/src/assets/images/stormworks/horizon-80/pride-3.jpg',
+								alt: 'Pride Edition with Echolodia TE'
+							},
+							{
+								path: '/src/assets/images/stormworks/horizon-80/pride-4.jpg',
+								alt: 'Pride Edition at a waterline'
+							}
+						]}
+					/>
+					<h4 class='text-xl font-bold mb-2'>Check out Pride Edition</h4>
+					<p class='text-gray-600 dark:text-gray-300'>
+						The Horizon 80 Pride Edition features a custom paint job, with the colors of the pride
+						flag, and a custom interior with rainbow accents. Download it for free on the workshop,
+						and show your pride on the road!
+					</p>
+					<a
+						href='https://steamcommunity.com/sharedfiles/filedetails/?id=3499419916'
+						target='_blank'
+						class='inline-block mt-4 px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white font-medium rounded-full transition-colors'
+						>Subscribe on the Workshop</a
+					>
+				</div>
+			</CardCarousel>
+			<hr />
+			<p>
+				<strong>Notes:</strong> Horizon 80 tows best with a high powered pickup truck. Do not tow with
+				the stabilizers enabled, the parking brake on, the awning open, the slide-out extended, or passengers
+				in the vehicle. Do not take turns at high speed while towing Horizon 80. Horizon 80 does not come
+				with a generator, and may need one for extended use.
+			</p>
+			<p>*Kitchen appliances credit to Imagine Wagons.</p>
+			<p>**Fireplace credit to Tajin.</p>
+		</article>
 	</div>
 </BaseLayout>
 

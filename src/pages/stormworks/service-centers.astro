@@ -9,15 +9,101 @@ const SITE_TITLE = 'Service Centers'
 ---
 
 <BaseLayout title={SITE_TITLE}>
+	<StickyHeader
+		title='Service Centers'
+		buyUrl='https://steamcommunity.com/sharedfiles/filedetails/?id=3668448699'
+		buyLabel='Subscribe on the Workshop'
+		exploreLabel='Find Yours'
+		exploreUrl='#find'
+	/>
 	<div>
 		<h1 class='title text-6xl font-bold'>{SITE_TITLE}</h1>
 		<h2 class='text-3xl font-medium mt-4 mb-10'>Repair things idk</h2>
 		<CustomImage
-			imagePath='/src/assets/blog/auto/service-centers/hero.jpg'
+			imagePath='/src/assets/images/stormworks/service-centers/hero.jpg'
 			altText='dude its a repair center it repairs cars'
 		/>
+		<div class='flex justify-center mt-10'>
+			<div
+				class='w-fit px-4 py-1.5 text-sm rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium transition-colors'
+			>
+				<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=3668448699' target='_blank'
+					>Subscribe on the Workshop</a
+				>
+			</div>
+		</div>
 
-		<article class='prose-xl w-full max-w-none mt-8'></article>
+		<article class='prose prose-xl dark:prose-invert w-full max-w-none mt-8'>
+			<p>
+				A workshop to repair SentyTek (and others i guess) vehicles in a safe and approved
+				environment.
+			</p>
+			<p>Features:</p>
+			<ul>
+				<li>2 four point car lifts (80% reliability rate)</li>
+				<li>Fire suppression systems</li>
+				<li>6 diesel pumps</li>
+				<li>2 OBD2 readers</li>
+				<li>Lots of equipment, four swappable panels for welders and fire extinguishers</li>
+			</ul>
+			<ImageCarousel
+				images={[
+					{
+						path: '/src/assets/images/stormworks/service-centers/1.jpg',
+						alt: "A service center's two car lifts, with a SentyTek Aita on one of them"
+					},
+					{
+						path: '/src/assets/images/stormworks/service-centers/2.jpg',
+						alt: 'A service center with a SentyTek Echolodia being worked on'
+					},
+					{
+						path: '/src/assets/images/stormworks/service-centers/3.jpg',
+						alt: "A service center's equipment and swappable panels for welders and fire extinguishers"
+					}
+				]}
+			/>
+			<p>
+				Yeah that's about it. Mostly an RP thing. Designed to fit SentyTek Echolodia size vehicles
+				at most, as the service area is 13 x 27 blocks. Fits Aita and Echolodia just fine.
+			</p>
+			<p>
+				Note down the vehicle's Center of Mass before spawning it to ensure you can lift it safely.
+				Refer to the vehicle's Owner's Manual if applicable.
+			</p>
+			<div id='find' class='mt-10'>
+				<h2>Find Your Nearest Service Center</h2>
+				<p>
+					Use the map below to locate the nearest SentyTek Service Center. Our service centers are
+					strategically located across Stormworks to provide convenient access for all drivers.
+					Whether you're in the city or out in the countryside, there's a SentyTek Service Center
+					nearby to help you with your vehicle maintenance and repairs.
+				</p>
+				<ImageCarousel
+					images={[
+						{
+							path: '/src/assets/images/stormworks/service-centers/loc-arc.jpg',
+							alt: 'Map of the Arctic region with Service Centers marked in red'
+						},
+						{
+							path: '/src/assets/images/stormworks/service-centers/loc-donkk.jpg',
+							alt: 'Map of the Donkk region with Service Centers marked in red'
+						},
+						{
+							path: '/src/assets/images/stormworks/service-centers/loc-saw.jpg',
+							alt: 'Map of the Sawyer region with Service Centers marked in red'
+						},
+						{
+							path: '/src/assets/images/stormworks/service-centers/loc-arid.jpg',
+							alt: 'Map of the Aridistan region with Service Centers marked in red'
+						}
+					]}
+				/>
+				<p class='text-sm mt-2 mb-10'>
+					<em
+						>*Maps are for illustrative purposes only. Actual service center locations may vary.</em>
+				</p>
+			</div>
+		</article>
 	</div>
 </BaseLayout>
 
