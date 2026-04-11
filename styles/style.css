@@ -139,12 +139,12 @@ img {
 
 ul {
     user-select: text;
-    overflow: hidden;
+    overflow: visible;
     text-align: left;
     padding-left: 6vw;
 }
 li {
-    list-style-position: inside;
+    list-style-position: outside;
     color: var(--text);
 }
 li p {
