@@ -144,13 +144,14 @@ ul {
     padding-left: 6vw;
 }
 li {
-    list-style-position: outside;
+    list-style-position: inside;
     color: var(--text);
 }
 li p {
-    margin-top: -20px;
+    margin-top: -3vh;
     position: relative;
-    left: -3vw;
+    left: -2vw;
+    margin-bottom: 1vh;
 }
 
 .buttonBox {
