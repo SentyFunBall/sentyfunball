@@ -148,7 +148,7 @@ li {
     color: var(--text);
 }
 li p {
-    margin-top: -3vh;
+    margin-top: -2vh;
     position: relative;
     left: -2vw;
     margin-bottom: 1vh;
