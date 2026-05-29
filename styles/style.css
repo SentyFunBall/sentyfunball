@@ -146,12 +146,10 @@ ul {
 li {
     list-style-position: inside;
     color: var(--text);
+    margin-bottom: 1vh;
 }
 li p {
-    margin-top: -2vh;
-    position: relative;
-    left: -2vw;
-    margin-bottom: 1vh;
+    margin: 0;
 }
 
 .buttonBox {
@@ -292,7 +290,7 @@ button:active h3 {
     margin-left: 5vw;
     margin-top: 1vh;
 }
-.result.border p {
+.result.border > p {
     width: 40vw;
     margin-left: 5vw;
     min-width: 250px;
