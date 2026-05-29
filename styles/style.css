@@ -149,6 +149,7 @@ li {
     margin-bottom: 1vh;
 }
 li p {
+    display: inline;
     margin: 0;
 }
 
