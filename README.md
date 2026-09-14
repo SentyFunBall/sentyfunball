@@ -1,9 +1,12 @@
-### i'm Senty (he/him) (sometimes goes by April (don't think too hard about it))
+### i'm Senty (he/they) (sometimes goes by April (don't think too hard about it))
 i do things:tm:, including but not limited to:
 - 🖥️ [Syngine](https://github.com/SentyTek/Syngine), a native cross-platform modern C++ game engine
+- 💻 [Syngine Studio](https://github.com/SentyTek/SyngineStudio), the editor program for Syngine
 - 🚙 [SenCar](https://github.com/SentyFunBall/SW-SenCar), Stormworks' best in-car display and driver system.
 - 🤖[SenTOS](https://sentyfunball.github.io/sentyfunball/projects/sentos/), a Discord bot that does... nothing? Something?
+- 
 the game engine is seriously my major thing
+
 There's also a lot of smaller projects like the Stormworks [SentyTek Aita](https://sentytek.github.io/stormworks/aita/) electric sedan, Stormworks [SWRT 11](https://sentytek.github.io/stormworks/swrt/) self-landing rocket, and of course [YouTube](https://www.youtube.com/@sentyfb).
 
 <!--
